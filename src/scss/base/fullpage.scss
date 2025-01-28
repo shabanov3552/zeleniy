@@ -1,0 +1,116 @@
+@use '../config/breakpoints.scss' as bp;
+@use '../config/functions.scss' as func;
+
+body {
+	.fp-init & {
+		// Для отключения обновления страницы свайпом на телефоне
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+}
+
+// Оболочка секций
+[data-fp] {
+	min-height: 100vh;
+
+	.touch & {
+		min-height: calc(var(--vh, 1vh) * 100);
+
+		@media (max-width: bp.$md) {
+			transition: height 0.2s;
+		}
+	}
+
+	.fp-init & {
+		// Для того, чтобы секции не перекрывали буллеты
+		z-index: 1;
+		// Относительно чего позиционируются секции
+		touch-action: none;
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+// Секция
+[data-fp-section] {
+	.fp-switching & {
+		touch-action: none;
+	}
+
+	.fp-init & {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+	}
+
+	// Модификации
+	.fp-init .slider-mode &,
+	.fp-init .cards-mode & {
+		transition: transform 0.7s cubic-bezier(0.55, 0.085, 0, 0.99) 0s;
+	}
+
+	.fp-init .fade-mode & {
+		transition: opacity 0.5s ease-in-out 0s, visibility 0.5s ease-in-out 0s;
+	}
+}
+
+// Оболочка буллетов
+.fp-bullets {
+	position: fixed;
+	top: 50%;
+	transform: translate(0, -50%);
+	right: func.rem(40);
+	max-height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	gap: func.rem(10);
+
+	@media (max-width: bp.$pc) {
+		right: func.rem(20);
+	}
+
+	@media (max-width: bp.$xs) {
+		top: auto;
+		bottom: func.rem(20);
+		transform: translate(50%, 0);
+		flex-direction: row;
+		right: 50%;
+	}
+
+	// Буллет
+	& .fp-bullet {
+		cursor: pointer;
+		width: func.rem(20);
+		height: func.rem(20);
+		flex: 0 0 func.rem(20);
+		border-radius: func.rem(10);
+		background-color: #100c46;
+		box-shadow: func.rem(0) func.rem(0) func.rem(3) #6257fe, 0 0 func.rem(30) rgba(255, 255, 255, 0.8);
+		border: func.rem(1) solid #fff;
+		opacity: 0.6;
+		transition: transform 0.4s ease-in-out 0s, opacity 0.4s ease-in-out 0s, background-color 0.4s ease-in-out 0s, box-shadow 0.4s ease-in-out 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	& .fp-bullet-active {
+		opacity: 1;
+		background-color: #6257fe;
+		transform: translate3D(func.rem(-5), func.rem(-2), 0);
+		box-shadow: func.rem(5) func.rem(2) func.rem(3) #100c46, 0 0 func.rem(30) rgba(255, 255, 255, 0.8);
+	}
+}

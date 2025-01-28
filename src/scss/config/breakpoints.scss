@@ -1,0 +1,26 @@
+@use 'variables' as vars;
+@use 'functions' as func;
+
+// Брейк-поинты
+$pc: func.em(vars.$containerWidth);
+
+// $laptopL: em(1439.98);
+$xxl: func.em(1399.98);
+
+// $laptop: em(1280.98);
+$xl: func.em(1199.98);
+
+// $tablet: em(991.98);
+$lg: func.em(991.98);
+
+// $mobile: em(767.98);
+$md: func.em(767.98);
+
+// $mobileMiddle: em(578.98);
+$sm: func.em(576.98);
+
+// $mobileSmall: em(479.98);
+$xs: func.em(479.98);
+
+// $mobileMini: em(374.98);
+$xxs: func.em(374.98);
