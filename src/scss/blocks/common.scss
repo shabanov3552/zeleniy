@@ -38,3 +38,43 @@
    clip: rect(0 0 0 0);
    overflow: hidden;
 }
+
+.hover-overlay {
+   position: relative;
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.1);
+      width: calc(100% + 6px);
+      height: calc(100% + 6px);
+      border-radius: 5px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease 0s;
+   }
+
+   @media (any-hover: hover) {
+      &:hover {
+         &::before {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+   }
+}
+
+.title-cormorant {
+   font-family: var(--second-family);
+   font-weight: 600;
+   font-size: 46px;
+   text-align: center;
+   color: var(--green-text-color);
+
+   @media (max-width:bp.$md) {
+      font-size: 30px;
+   }
+}

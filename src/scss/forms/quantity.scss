@@ -4,7 +4,6 @@
 	width: 88px;
 	height: 40px;
 	display: flex;
-	border: 1px solid rgba(166, 166, 166, 0.45);
 
 	// .quantity__button
 	&__button {
@@ -20,9 +19,9 @@
 			left: 50%;
 			transition: all 0.3s ease 0s;
 			margin: 0px 0px 0px -4.5px;
-			background-color: #a6a6a6;
-			width: 9px;
-			height: 1px;
+			background-color: #8a8a8a;
+			width: 17px;
+			height: 3px;
 		}
 
 		@media (any-hover: hover) {
@@ -43,7 +42,14 @@
 		}
 
 		// .quantity__button_minus
-		&_minus {}
+		&_minus {
+
+			&::before,
+			&::after {
+				transform: translateX(-50%);
+
+			}
+		}
 	}
 
 	// .quantity__input
@@ -52,10 +58,12 @@
 
 		input {
 			height: 100%;
-			color: #a6a6a6;
-			font-size: 12px;
 			width: 100%;
 			text-align: center;
+			font-family: var(--font-family);
+			font-weight: 400;
+			font-size: 22px;
+			color: #000;
 		}
 	}
 }

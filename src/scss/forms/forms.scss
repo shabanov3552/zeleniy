@@ -29,21 +29,40 @@ textarea {
 	}
 }
 
-// Снипет (HTML):
+.parsley-errors-list {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	font-size: 16px;
+	padding: func.rem(5) 0;
+	color: var(--red-error);
+	// margin-bottom: func.rem(-20);
+}
 
 .form {
+
+	// .form__grid
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px 60px;
+		margin-bottom: func.rem(40);
+
+		@media (max-width:bp.$md) {
+			grid-template-columns: 1fr;
+			gap: 28px;
+		}
+	}
 
 	// .form__line
 
 	&__line {
 		position: relative;
 
-		&._form-focus {
-			.form__label {
-				top: -20px;
-				left: 0;
-				font-size: 12px;
-				line-height: 22px;
+		@media (min-width:bp.$md) {
+			&:last-child {
+				grid-column: -1/1;
 			}
 		}
 	}
@@ -53,15 +72,23 @@ textarea {
 	&__label {
 		transition: all 0.3s ease 0s;
 		position: absolute;
-		top: 13px;
-		left: 16px;
-		color: rgba(0, 0, 0, 0.604535);
-		font-size: 18px;
-		line-height: 22px;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
 		pointer-events: none;
+		line-height: 22px;
+		font-size: 20px;
+		color: #989793;
 
-		.has-error & {
-			top: 35px;
+		@media (max-width:bp.$md) {
+			font-size: 17px;
+		}
+
+		._form-focus & {
+			top: -5px;
+			left: 0;
+			font-size: 12px;
+			line-height: 22px;
 		}
 	}
 
@@ -69,20 +96,18 @@ textarea {
 
 	&__input {
 		outline: none;
-		background: #FFFFFF;
-		border: 1px solid rgba(0, 0, 0, 0.230742);
-		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-		border-radius: 5px;
-		height: 48px;
-		padding: func.rem(16) func.rem(32) func.rem(16) func.rem(16);
+		background: transparent;
+		border-bottom: 1px solid #7f7e7a;
+		padding: func.rem(5) func.rem(32) func.rem(5) func.rem(0);
 		width: 100%;
+		border-radius: 0;
 
 		.has-error & {
-			border: 2px solid var(--red-error);
+			border-bottom: 2px solid var(--red-error);
 		}
 
 		&.parsley-error {
-			border: 2px solid var(--red-error);
+			border-bottom: 2px solid var(--red-error);
 		}
 	}
 
@@ -94,7 +119,8 @@ textarea {
 		width: 32px;
 		height: 32px;
 		padding: func.rem(8);
-		top: 8px;
+		top: 50%;
+		transform: translateY(-50%);
 		right: 4px;
 		display: none;
 		transition: all 0.3s ease 0s;
@@ -141,10 +167,67 @@ textarea {
 			}
 		}
 	}
-}
 
-.parsley-errors-list {
-	padding: func.rem(10) 0;
-	margin-bottom: func.rem(-20);
-	color: var(--red-error);
+	// .form__footer
+
+	&__footer {
+		display: grid;
+		justify-content: center;
+
+		@media (max-width:bp.$md) {
+			justify-content: stretch;
+		}
+	}
+
+	// .form__button
+
+	&__button {
+		background: #eaeaea;
+		height: 62px;
+		font-size: 21px;
+		font-weight: 400;
+		text-align: center;
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 402px;
+		transition: background 0.3s ease 0s;
+		margin-bottom: func.rem(8);
+
+		@media (max-width:bp.$md) {
+			width: 100%;
+			font-size: 17px;
+			height: 56px;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: #e2e2e2;
+			}
+		}
+	}
+
+	// .form__consent
+
+	&__consent {
+		font-size: 18px;
+		line-height: 167%;
+		color: #a4a39f;
+		text-align: center;
+
+		@media (max-width:bp.$md) {
+			font-size: 14px;
+		}
+	}
+
+	// .form__consent-link
+
+	&__consent-link {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }

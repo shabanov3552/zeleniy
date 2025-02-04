@@ -22,7 +22,7 @@
 			<div class="header__container">
 				<a href="" class="header__logo"><img src="@img/logo.png" alt=""></a>
 				<div class="header__menu dropdown" data-dropdown>
-					<button type="button" class="dropdown__button" data-dropdown-button><img src="@img/icons/icon-menu.svg" alt=""></button>
+					<button type="button" class="dropdown__button hover-overlay" data-dropdown-button><img src="@img/icons/icon_menu.svg" alt=""></button>
 					<div class="dropdown__block">
 						<div class="dropdown__links">
 							<a href="" class="header__menu-link dropdown__link">Доставка</a>
@@ -34,44 +34,45 @@
 						</div>
 					</div>
 				</div>
-				<button type="button" class="header__catalog-btn"><span>Каталог</span><img src="@img/icons/icon_dropdown.svg" alt=""></button>
-				<button type="button" class="header__search-btn" data-popup="#search"><span>Поиск</span><img src="@img/icons/icon_search.svg" alt=""></button>
+				<button type="button" class="header__catalog-btn hover-overlay js-open-sidebar-catalog"><span>Каталог</span><img src="@img/icons/icon_dropdown.svg" alt=""></button>
+				<button type="button" class="header__search-btn hover-overlay" data-popup="#search"><span>Поиск</span><img src="@img/icons/icon_search.svg" alt=""></button>
 				<div class="header__contacts">
-					<a href="" class="header__contacts-link"><img src="@img/icons/icon_tg.svg" alt=""></a>
-					<a href="" class="header__contacts-link"><img src="@img/icons/icon_wa.svg" alt=""></a>
+					<a href="" class="header__contacts-link hover-overlay"><img src="@img/icons/icon_tg.svg" alt=""></a>
+					<a href="" class="header__contacts-link hover-overlay"><img src="@img/icons/icon_wa.svg" alt=""></a>
 					<div class="header__contacts-drop dropdown" data-dropdown>
 						<a href="tel:+7 391 271 11 41" class="dropdown__button" data-dropdown-button="hover">+7 391 271 11 41</a>
 						<div class="dropdown__block">
 							<div class="dropdown__links">
 								<a href="tel:+79069145771" class="dropdown__link">+7 906 914 57 71</a>
-								<button type="button" class="dropdown__link" data-popup="#callback">Перезвоните мне</button>
+								<button type="button" class="dropdown__link dropdown__link_green" data-popup="#callback">Перезвоните мне</button>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="header__nav-panel">
 					<div class="nav-panel">
-						<a href="" class="nav-panel__item">
+						<a href="" class="nav-panel__item hover-overlay">
 							<img src="@img/icons/nav-icon_delivery.svg" alt="">
 							<!-- <img src="@img/icons/nav-icon_delivery_active.svg" alt=""> -->
 							<span>Доставка</span>
 						</a>
-						<a href="" class="nav-panel__item">
+						<a href="" class="nav-panel__item hover-overlay">
 							<img src="@img/icons/nav-icon_favorites.svg" alt="">
 							<!-- <img src="@img/icons/nav-icon_favorites_active.svg" alt=""> -->
 							<span>Избранное</span>
 						</a>
-						<a href="" class="nav-panel__item">
+						<a href="" class="nav-panel__item hover-overlay">
 							<img src="@img/icons/nav-icon_profile.svg" alt="">
 							<!-- <img src="@img/icons/nav-icon_profile_active.svg" alt=""> -->
 							<span>Профиль</span>
 						</a>
-						<a href="" class="nav-panel__item">
+						<button type="button" class="nav-panel__item hover-overlay" data-popup="#basket">
 							<img src="@img/icons/nav-icon_basket.svg" alt="">
 							<!-- <img src="@img/icons/nav-icon_basket_active.svg" alt=""> -->
 							<span>Корзина</span>
-						</a>
+						</button>
 					</div>
 				</div>
 			</div>
+			@@include('_sidebar-catalog.htm',{})
 		</header>

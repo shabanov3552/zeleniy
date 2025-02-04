@@ -2,6 +2,7 @@
 @use './variables.scss' as var;
 @use './functions.scss' as func;
 @use './mixins.scss' as mixin;
+@use './breakpoints.scss' as bp;
 
 // Стили тега BODY
 body {
@@ -24,6 +25,10 @@ body {
    flex-direction: column;
    overflow: hidden;
    background: var(--main-background);
+
+   @media (max-width:bp.$lg) {
+      padding-bottom: func.rem(97);
+   }
 
    @supports (overflow: clip) {
       overflow: clip;
@@ -62,8 +67,8 @@ body {
          }
 
          @else {
-            @include mixin.adaptiveValue("padding-left", math.div(var.$containerPadding, 2), 15);
-            @include mixin.adaptiveValue("padding-right", math.div(var.$containerPadding, 2), 15);
+            @include mixin.adaptiveValue("padding-left", 60, 20, 0, 1300, 1200);
+            @include mixin.adaptiveValue("padding-right", 60, 20, 0, 1300, 1200);
          }
       }
    }

@@ -217,22 +217,6 @@ window.addEventListener("load", function (e) {
 
 //#endregion
 
-//#region hover на ссылках в боковом каталоге
-
-const sidebarCatalogMenuChunk = document.querySelector('.sidebar-catalog__menu-chunk');
-if (sidebarCatalogMenuChunk !== null) {
-   const sidebarCatalogMenu = sidebarCatalogMenuChunk.querySelector('.sidebar-catalog__menu');
-   const sidebarRect = sidebarCatalogMenuChunk.querySelector('.sidebar-catalog__hover-rect')
-   sidebarCatalogMenuChunk.addEventListener('mouseover', (e) => {
-      let target = e.target.closest('.sidebar-catalog__link');
-      if (e.target.classList.contains('sidebar-catalog__link')) {
-         sidebarRect.style.bottom = `${sidebarCatalogMenu.offsetHeight - ((target.offsetTop + target.clientHeight) - sidebarCatalogMenu.scrollTop)}px`
-      }
-   })
-}
-
-//#endregion
-
 //#region Открыть/закрыть боковой каталог + Открытие закрытие подкатегорий в каталоге
 
 function sidebarCatalogActions(e) {

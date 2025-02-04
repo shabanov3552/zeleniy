@@ -125,4 +125,114 @@
 		</div>
 	</div>
 	<!-- Заказать звонок -->
+	<div id="basket" aria-hidden="true" class="popup popup-basket">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__header">
+					<div class="popup__title">Ваша корзина</div>
+					<button data-close type="button" class="popup__close">
+						<svg class="popup__close-svg">
+							<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="popup__main">
+					<div class="basket">
+						<div class="basket__items">
+							<div class="basket-item">
+								<div class="basket-item__image-ibg"><img src="@img/basket_2.png" alt=""></div>
+								<div class="basket-item__info">
+									<div class="basket-item__top">
+										<a href="" class="basket-item__name">Желто-розовый букет</a>
+										<div class="basket-item__buttons">
+											<button type="button" class="basket-item__delete hover-overlay">
+												<img src="@img/icons/icon_basket-del.svg" alt="">
+											</button>
+											<button type="button" class="basket-item__favorite">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon_basket-fav"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="basket-item__footer">
+										<div class="basket-item__price">5450 ₽</div>
+										<div class="basket-item__quantity">
+											<div data-quantity class="quantity">
+												<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+												<div class="quantity__input">
+													<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+												</div>
+												<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+											</div>
+										</div>
+										<div class="basket-item__total-price">5450 ₽</div>
+									</div>
+								</div>
+							</div>
+							<div class="basket-item">
+								<div class="basket-item__image-ibg"><img src="@img/basket_1.png" alt=""></div>
+								<div class="basket-item__info">
+									<div class="basket-item__top">
+										<a href="" class="basket-item__name">Набор из 10 гелиевых шаров с собачкой</a>
+										<div class="basket-item__buttons">
+											<button type="button" class="basket-item__delete hover-overlay">
+												<img src="@img/icons/icon_basket-del.svg" alt="">
+											</button>
+											<button type="button" class="basket-item__favorite">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#icon_basket-fav"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="basket-item__footer">
+										<div class="basket-item__price">1000 ₽</div>
+										<div class="basket-item__quantity">
+											<div data-quantity class="quantity">
+												<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+												<div class="quantity__input">
+													<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+												</div>
+												<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+											</div>
+										</div>
+										<div class="basket-item__total-price">5000 ₽</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="basket__summary">
+							<div class="basket-summary">
+								<div class="basket-summary__cost">
+									<div class="basket-summary__name">Стоимость</div>
+									<div class="basket-summary__value">10450 ₽</div>
+								</div>
+								<div class="basket-summary__cost">
+									<div class="basket-summary__name">Скидка</div>
+									<div class="basket-summary__value">250 ₽</div>
+								</div>
+								<div class="basket-summary__total">
+									<div class="basket-summary__name">Итого</div>
+									<div class="basket-summary__value">10200 <span>₽</span></div>
+								</div>
+								<a href="" class="basket-summary__checkout">Оформить заказ</a>
+								<div class="basket-summary__note">Способ и время доставки можно выбрать при оформлении заказа</div>
+							</div>
+						</div>
+						<div class="basket__info">
+							<div class="basket-info">
+								<div class="basket-info__icon"><img src="@img/icons/icon_basket-info.svg" alt=""></div>
+								<div class="basket-info__text">
+									Перед отправкой букета, <b>мы пришлем вам фотографию</b> собранного букета на WhatsApp или Telegram,
+									поэтому <b>убедитесь в правильности номера</b>, который вы укажете. Если какого-то цветка
+									не будет в наличии, то мы согласуем с Вами замену.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
