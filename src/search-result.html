@@ -1,0 +1,32 @@
+@@include('html/_header.htm',{
+"title":"Поиск",
+"modClass":"search-result"
+})
+<main class="page">
+   <div class="page__container">
+      @@include('html/_breadcrumbs.htm',{})
+      <div class="page__title title-cormorant title-cormorant_brown">По запросу «розы»: 65 предложений</div>
+      <div class="main-catalog">
+         <div class="main-catalog__content">
+            <div class="main-catalog__cards">
+               @@include('html/_product-card.htm',{
+               "name":"Желто-розовый букет из альстромерии"
+               })
+               @@include('html/_product-card.htm',{
+               "name":"Желто-розовый букет из альстромерии"
+               })
+               @@include('html/_product-card.htm',{
+               "name":"Желто-розовый букет из альстромерии"
+               })
+               @@include('html/_product-card.htm',{
+               "name":"Желто-розовый букет из альстромерии"
+               })
+            </div>
+            <div class="main-catalog__pagging">
+               @@include('html/_pagging.htm',{})
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})

@@ -716,3 +716,31 @@
       }
    }
 }
+
+//========================================================================================================================================================
+
+.reviews {
+   margin-bottom: func.rem(150);
+
+   @media (max-width:bp.$md) {
+      margin-bottom: func.rem(85);
+   }
+
+   // .reviews__container
+
+   &__container {}
+
+   // .reviews__title
+
+   &__title {
+      margin-bottom: func.rem(70);
+
+      @media (max-width:bp.$md) {
+         margin-bottom: func.rem(25);
+      }
+   }
+
+   review-lab .widget__header {
+      display: none;
+   }
+}

@@ -132,7 +132,7 @@
    &__price-old {
       font-weight: 400;
       text-decoration: line-through;
-      color: #a4a39f;
+      color: var(--grey-text-color);
    }
 
    // .product-card__labels
@@ -217,25 +217,12 @@
    // .product-card__button
 
    &__button {
-      display: block;
-      border-radius: 5px;
-      background: #c2dfbf;
-      font-weight: 400;
-      font-size: 21px;
-      color: #000;
       padding: func.rem(18);
       width: 100%;
-      transition: background 0.3s ease 0s;
 
       @media (max-width:bp.$lg) {
          font-size: 16px;
          padding: func.rem(13);
-      }
-
-      @media (any-hover: hover) {
-         &:hover {
-            background: #aac4a7;
-         }
       }
    }
 

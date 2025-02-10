@@ -9,6 +9,7 @@
 .select {
 	min-width: 0;
 	position: relative;
+	font-size: 20px;
 
 	// .select__body
 	&__body {
@@ -19,30 +20,30 @@
 	&__title {
 		color: inherit;
 		text-align: left;
-		border: 1px solid #d9d9d9;
-		background-color: #fff;
 		cursor: pointer;
-		width: 100%;
-		border-radius: 4px;
-		height: 48px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+		// width: 100%;
+		// border-radius: 4px;
+		height: 25px;
 	}
 
 	// .select__value
 	&__value {
 		display: flex;
+		display: grid;
+		grid-template-columns: repeat(2, auto);
 		min-width: 0;
 		align-items: center;
-		height: func.rem(30);
-		padding: 0 func.rem(15);
+		height: func.rem(25);
+		// padding: 0 func.rem(15);
 		gap: func.rem(10);
 
 		>* {
 			flex: 1 1 auto;
 		}
 
-		&:after {
+		&::before {
 			content: "";
+			width: 12px;
 			align-self: stretch;
 			flex: 0 0 12px;
 			transition: all 0.3s ease 0s;
@@ -80,6 +81,7 @@
 		white-space: nowrap;
 	}
 
+	// .select__input
 	&__input {
 		width: 100%;
 		background-color: transparent;
@@ -90,15 +92,15 @@
 	&__options {
 		color: #000;
 		position: absolute;
-		top: 100%;
-		border-radius: 0 0 4px 4px;
-		min-width: 100%;
+		top: calc(100% + 10px);
+		border-radius: 5px;
+		width: min-content;
 		left: 0;
 		background-color: #fff;
 		border: 1px solid #d9d9d9;
 		border-top: 0;
 		padding: 10px 0px 5px 0px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+		box-shadow: 0 12px 14px 0 rgba(85, 51, 28, 0.5);
 	}
 
 	// .select__scroll
@@ -123,6 +125,7 @@
 		cursor: pointer;
 		padding: 5px 15px;
 		color: inherit;
+		white-space: nowrap;
 
 		&._select-selected {
 			background-color: #eee;

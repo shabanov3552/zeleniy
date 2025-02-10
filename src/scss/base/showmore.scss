@@ -1,14 +1,26 @@
-[data-showmore] {
-}
-[data-showmore-content] {
-}
+[data-showmore] {}
+
+[data-showmore-content] {}
+
 [data-showmore-button] {
+	font-size: 16px;
+	line-height: 150%;
+	border-bottom: 1px dashed #000;
+
+	@media (any-hover: hover) {
+		&:hover {
+			border-color: transparent;
+		}
+	}
+
 	span {
 		&:last-child {
 			display: none;
 		}
+
 		._showmore-active & {
 			display: none;
+
 			&:last-child {
 				display: block;
 			}

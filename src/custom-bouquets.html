@@ -1,0 +1,42 @@
+@@include('html/_header.htm',{
+"title":"Авторские букеты",
+"modClass":""
+})
+<main class="page">
+   <div class="page__container">
+      @@include('html/_breadcrumbs.htm',{})
+      <div class="page__title title-cormorant">Авторские букеты</div>
+      <div class="page__text">Составим букеты индивидуально, с учетом Ваших предпочтений и бюджета, согласуем по фотографии и доставим или подготовим букет к нужному времени</div>
+      <div class="custom-bouquets">
+         <div class="custom-bouquets__grid">
+            <a href="" class="custom-bouquets__link">
+               <div class="custom-bouquets__image-ibg"><img src="@img/mp-fb_2.png" alt=""></div>
+               <span>Букет из редчайших роз планеты Земля</span>
+            </a>
+            <a href="" class="custom-bouquets__link">
+               <div class="custom-bouquets__image-ibg"><img src="@img/mp-fb_2.png" alt=""></div>
+               <span>Букет невероятной красоты</span>
+            </a>
+            <a href="" class="custom-bouquets__link">
+               <div class="custom-bouquets__image-ibg"><img src="@img/mp-fb_2.png" alt=""></div>
+               <span>Букет прямиком из Африки</span>
+            </a>
+            <a href="" class="custom-bouquets__link">
+               <div class="custom-bouquets__image-ibg"><img src="@img/mp-fb_2.png" alt=""></div>
+               <span>Букет невероятной красоты</span>
+            </a>
+            <a href="" class="custom-bouquets__link">
+               <div class="custom-bouquets__image-ibg"><img src="@img/mp-fb_2.png" alt=""></div>
+               <span>Букет из редчайших роз планеты Земля</span>
+            </a>
+         </div>
+         <div class="custom-bouquets__pagging">@@include('html/_pagging.htm',{})</div>
+         <div class="custom-bouquets__form">
+            <div class="custom-bouquets__title title-cormorant">Заказать</div>
+            <div class="custom-bouquets__text">Свяжитесь с нами через форму или позвоните по телефону</div>
+            @@include('html/_page-form.htm',{})
+         </div>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})

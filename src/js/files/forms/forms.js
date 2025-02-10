@@ -108,7 +108,6 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 	if (options.viewPass) {
 		const passInputs = document.querySelectorAll('[type="password"]');
 		passInputs.forEach(input => {
-			console.log(input);
 			input.insertAdjacentHTML('afterend', '<div class="form__viewpass"></div>');
 		});
 		document.addEventListener("click", function (e) {

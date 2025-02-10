@@ -1,0 +1,48 @@
+@@include('html/_header.htm',{
+"title":"Избранное",
+"modClass":"favorites-page"
+})
+<main class="page">
+   <div class="page__container">
+      @@include('html/_breadcrumbs.htm',{})
+      <div class="page__title title-cormorant title-cormorant_brown">Избранное</div>
+      <div class="main-catalog">
+         <div class="main-catalog__content">
+            <div class="main-catalog__header">
+               <div class="sort-box" data-one-select>
+                  <div class="sort-box__title">Сортировка:</div>
+                  <select data-class-modif="type">
+                     <option value="1" selected>По умолчанию</option>
+                     <option value="2">По возрастанию цены</option>
+                     <option value="3">По убыванию цены</option>
+                     <option value="3">По алфавиту</option>
+                  </select>
+                  <select data-class-modif="limit">
+                     <option value="1" selected>Показывать по 15</option>
+                     <option value="2">Показывать по 30</option>
+                     <option value="3">Показывать по 60</option>
+                  </select>
+               </div>
+            </div>
+            <div class="main-catalog__cards">
+               @@include('html/_product-card.htm',{
+               "name":"Желто-розовый букет из альстромерии"
+               })
+               @@include('html/_product-card.htm',{
+               "name":"Желто-розовый букет из альстромерии"
+               })
+               @@include('html/_product-card.htm',{
+               "name":"Желто-розовый букет из альстромерии"
+               })
+               @@include('html/_product-card.htm',{
+               "name":"Желто-розовый букет из альстромерии"
+               })
+            </div>
+            <div class="main-catalog__pagging">
+               @@include('html/_pagging.htm',{})
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})

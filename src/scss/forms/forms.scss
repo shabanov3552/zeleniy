@@ -151,7 +151,8 @@ textarea {
 		background: url(../img/icons/icon_pass.svg);
 		position: absolute;
 		right: 40px;
-		top: 12px;
+		top: 50%;
+		transform: translateY(-50%);
 		cursor: pointer;
 		opacity: 0;
 
@@ -213,7 +214,7 @@ textarea {
 	&__consent {
 		font-size: 18px;
 		line-height: 167%;
-		color: #a4a39f;
+		color: var(--grey-text-color);
 		text-align: center;
 
 		@media (max-width:bp.$md) {

@@ -1,0 +1,148 @@
+@@include('html/_header.htm',{
+"title":"Деталка",
+"modClass":""
+})
+<main class="page">
+   <div class="page__container">
+      @@include('html/_breadcrumbs.htm',{})
+      <div class="page__title title-cormorant title-cormorant_brown">Зефирный букет желтых хризантем</div>
+      <div class="product-detail">
+         <div class="product-detail__article">Артикул: 2342</div>
+         <div class="product-detail__wrapper">
+            <div class="product-detail__slider">
+               <div class="product-detail-slider">
+                  <div class="product-detail-slider__thumbs swiper">
+                     <div class="product-detail-slider__wrapper swiper-wrapper">
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_5.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_1.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_2.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_3.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_5.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_1.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_2.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_3.png" alt=""></div>
+                     </div>
+                  </div>
+
+                  <div class="product-detail-slider__main swiper">
+                     <div class="product-detail-slider__wrapper swiper-wrapper">
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_5.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_1.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_2.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_3.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_5.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_1.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_2.png" alt=""></div>
+                        <div class="product-detail-slider__slide swiper-slide product-detail__image-ibg"><img src="@img/product-card_3.png" alt=""></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="product-detail__labels">
+                  <div class="product-detail__label product-detail__label_green">Хит</div>
+                  <div class="product-detail__label product-detail__label_orange">Новинка</div>
+               </div>
+            </div>
+            <div class="product-detail__info">
+               <div class="product-detail__top">
+                  <div class="product-detail__price-block">
+                     <div class="product-detail__price">5450 <span>₽</span></div>
+                     <div class="product-detail__price-old">5450 ₽</div>
+                  </div>
+                  <div class="product-detail__actions">
+                     <button type="submit" class="product-detail__favorite-button"> <!-- Добавить класс _active если товар добавлен в избраное -->
+                        <svg>
+                           <use xlink:href="img/icons/icons.svg#icon_favorite"></use>
+                        </svg>
+                     </button>
+                     <button type="button" id="share-button" class="product-detail__share">
+                        <svg>
+                           <use xlink:href="img/icons/icons.svg#icon_share"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <div class="product-detail__order-controls">
+                  <div data-quantity class="quantity">
+                     <button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+                     <div class="quantity__input">
+                        <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                     </div>
+                     <button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+                  </div>
+                  <button type="button" class="product-detail__add-to-basket green-button">В корзину</button>
+               </div>
+               <div class="product-detail__descriptions">Яркий букет в розово-желтой цветовой гамме. В составе: розы сортов Лучиано и Тара, оксипеталум, диантус, кустовые пионовидные розы, скабиоза Стеллата и папоротник. Букет упакован в бумагу белого цвета и перевязан декоративными лентами.</div>
+               <div class="product-detail__specs-block">
+                  <div class="product-detail__specs-item">
+                     <div class="product-detail__spec-name">Диаметр, см</div>
+                     <div class="product-detail__spec-value">45</div>
+                  </div>
+                  <div class="product-detail__specs-item">
+                     <div class="product-detail__spec-name">Высота, см</div>
+                     <div class="product-detail__spec-value">50</div>
+                  </div>
+                  <div class="product-detail__specs-item">
+                     <div class="product-detail__spec-name">Цвет</div>
+                     <div class="product-detail__spec-value">Желтый</div>
+                  </div>
+                  <div class="product-detail__specs-item">
+                     <div class="product-detail__spec-name">Повод</div>
+                     <div class="product-detail__spec-value">1 сентября</div>
+                  </div>
+                  <div class="product-detail__specs-item">
+                     <div class="product-detail__spec-name">Кол-во цветов</div>
+                     <div class="product-detail__spec-value">15</div>
+                  </div>
+                  <div class="product-detail__specs-item">
+                     <div class="product-detail__spec-name">Состав</div>
+                     <div class="product-detail__spec-value">Хризантема кустовая, альстромения</div>
+                  </div>
+               </div>
+               <div data-spollers class="product-detail__spollers">
+                  <div class="product-detail__spoller-item">
+                     <button type="button" data-spoller class="product-detail__spoller-title">Доставка</button>
+                     <div class="product-detail__spoller-body">
+                        <p>Заявки на доставку принимаются в рабочее время магазина <br> с 9:00 до 20:00.</p>
+                        <p>Стоимость доставки в нерабочее время магазина рассчитывается индивидуально.</p>
+                        <a href="" class="product-detail__link">
+                           Посмотреть зоны доставки
+                           <img src="@img/icons/icon_arrow-link.svg" alt="">
+                        </a>
+                     </div>
+                  </div>
+                  <div class="product-detail__spoller-item">
+                     <button type="button" data-spoller class="product-detail__spoller-title">Оплата</button>
+                     <div class="product-detail__spoller-body">
+                        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Встретил рыбными подпоясал, семь ему единственное всеми свой. Парадигматическая всеми решила маленький наш жизни переписывается предупредила использовало моей, вопрос страна.</p>
+                        <a href="" class="product-detail__link">
+                           Ссылка
+                           <img src="@img/icons/icon_arrow-link.svg" alt="">
+                        </a>
+                     </div>
+                  </div>
+                  <div class="product-detail__spoller-item">
+                     <button type="button" data-spoller class="product-detail__spoller-title">Уход за цветами</button>
+                     <div class="product-detail__spoller-body">
+                        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Переулка, свой за рот использовало текст путь до рекламных оксмокс гор, предложения послушавшись наш меня коварный родного не повстречался всеми?</p>
+                        <a href="" class="product-detail__link">
+                           Ссылка
+                           <img src="@img/icons/icon_arrow-link.svg" alt="">
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      @@include('html/_prod-mini-slider.htm',{
+      "title":"С этим товаром покупают"
+      })
+      @@include('html/_prod-mini-slider.htm',{
+      "title":"Вас может заинтересовать"
+      })
+      @@include('html/_prod-mini-slider.htm',{
+      "title":"История просмотров"
+      })
+   </div>
+</main>
+@@include('html/_footer.htm',{})

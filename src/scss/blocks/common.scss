@@ -77,4 +77,117 @@
    @media (max-width:bp.$md) {
       font-size: 30px;
    }
+
+   // .title-cormorant_brown
+
+   &_brown {
+      color: var(--brown-text-color);
+   }
+}
+
+.green-button {
+   background: var(--green-button);
+   border-radius: 5px;
+   font-size: 21px;
+   text-align: center;
+   padding: func.rem(18) 0;
+   display: block;
+   color: #000;
+   transition: background 0.3s ease 0s;
+
+   @media (any-hover: hover) {
+      &:hover {
+         background: var(--green-button-hover);
+      }
+   }
+
+   @media (max-width:bp.$md) {
+      font-size: 17px;
+      padding: func.rem(12) 0;
+   }
+}
+
+.page {
+   // .page__container
+
+   &__container {
+      .empty-state & {
+         margin-bottom: func.rem(100);
+
+         @media (max-width:bp.$md) {
+            margin-bottom: func.rem(45);
+         }
+      }
+   }
+
+   // .page__title
+
+   &__title {
+      text-align: center;
+      margin-bottom: func.rem(30);
+
+      &:has(+.page__text) {
+         margin-bottom: func.rem(10);
+      }
+   }
+
+   // .page__text
+
+   &__text {
+      text-align: center;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 143%;
+      text-align: center;
+      color: #000;
+      margin-bottom: func.rem(50);
+   }
+
+   // .page__link
+
+   &__link {
+      width: 332px;
+      margin: 0 auto;
+   }
+}
+
+.status-message {
+   display: grid;
+   grid-template-columns: 19px 1fr;
+   gap: 14px;
+   align-items: center;
+   font-size: 16px;
+   line-height: 112%;
+
+   &::before {
+      content: '';
+      width: 19px;
+      height: 14px;
+      display: block;
+   }
+
+   // .status-message_success
+
+   &_success {
+      color: #449831;
+
+      &::before {
+         background: url(../../img/icons/icon_success.svg) center no-repeat;
+      }
+   }
+
+   // .status-message_failure
+
+   &_failure {
+      color: #c13e59;
+
+      &::before {
+         background: url(../../img/icons/icon_failure.svg) center no-repeat;
+      }
+   }
+
+   // .status-message__text
+
+   &__text {}
 }

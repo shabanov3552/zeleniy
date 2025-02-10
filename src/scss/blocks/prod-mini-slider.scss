@@ -1,0 +1,242 @@
+@use '../config/breakpoints' as bp;
+@use '../config/variables' as var;
+@use '../config/functions' as func;
+@use '../config/mixins' as mixin;
+
+.prod-mini-slider {
+   &:last-child {
+      margin-bottom: func.rem(140);
+
+      @media (max-width:bp.$md) {
+         margin-bottom: func.rem(40);
+      }
+   }
+
+   &+.prod-mini-slider {
+      margin-top: func.rem(110);
+
+      @media (max-width:bp.$md) {
+         margin-top: func.rem(40);
+      }
+   }
+
+   @media (min-width:bp.$lg) {
+      &:has(.swiper-lock) {
+         .prod-mini-slider__title {
+            margin-bottom: func.rem(40);
+         }
+      }
+   }
+
+   // .prod-mini-slider__title
+
+   &__title {
+      @media (max-width:bp.$lg) {
+         margin-bottom: func.rem(26);
+      }
+   }
+
+   // .prod-mini-slider__slider
+
+   &__slider {
+      @media (max-width:bp.$md) {
+         overflow: visible !important;
+      }
+   }
+
+   // .prod-mini-slider__nav
+
+   &__nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 68px;
+      margin-bottom: func.rem(30);
+
+      @media (max-width:bp.$lg) {
+         display: none;
+      }
+   }
+
+   &__button-prev,
+   &__button-next {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+         width: 17px;
+         height: 31px;
+
+         use {
+            fill: var(--green-text-color);
+         }
+      }
+   }
+
+   // .prod-mini-slider__button-prev
+
+   &__button-prev {}
+
+   // .prod-mini-slider__button-next
+
+   &__button-next {}
+
+   // .prod-mini-slider__wrapper
+
+   &__wrapper {
+      .swiper-lock & {
+         justify-content: center;
+      }
+   }
+
+   // .prod-mini-slider__slide
+
+   &__slide {
+      &:not(:last-child) {
+         margin-right: func.rem(33);
+
+         @media (max-width:bp.$md) {
+            margin-right: func.rem(10);
+         }
+      }
+   }
+
+   // .prod-mini-slider__card
+
+   &__card {
+      position: relative;
+      width: 228px;
+
+      @media (max-width:bp.$md) {
+         width: 153px;
+      }
+   }
+
+   // .prod-mini-slider__favorite-button
+
+   &__favorite-button {
+      width: 25px;
+      height: 22px;
+      position: absolute;
+      z-index: 2;
+      top: 20px;
+      right: 20px;
+
+      svg {
+         width: 100%;
+         height: 100%;
+
+         use {
+            fill: none;
+            stroke: #fff;
+         }
+      }
+
+      @media (any-hover: hover) {
+         &:hover {
+            svg use {
+               fill: #fff;
+            }
+         }
+      }
+
+      &._active {
+         svg use {
+            fill: #fff;
+         }
+
+         @media (any-hover: hover) {
+            &:hover {
+               svg use {
+                  fill: none;
+               }
+            }
+         }
+      }
+
+      @media (max-width:bp.$md) {
+         top: 12px;
+         right: 12px;
+      }
+   }
+
+   // .prod-mini-slider__slide-ibg
+
+   &__slide-ibg {
+      height: 303px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: func.rem(17);
+
+      @media (max-width:bp.$md) {
+         height: 203px;
+         margin-bottom: func.rem(10);
+      }
+   }
+
+   // .prod-mini-slider__price-chunk
+
+   &__price-chunk {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: func.rem(9);
+      padding: func.rem(0) func.rem(10);
+      font-size: 24px;
+
+      @media (max-width:bp.$md) {
+         font-size: 21px;
+         padding: 0;
+      }
+   }
+
+   // .prod-mini-slider__price
+
+   &__price {
+      font-weight: 700;
+      color: #295e21;
+
+      span {
+         font-weight: 400;
+      }
+   }
+
+   // .prod-mini-slider__price-old
+
+   &__price-old {
+      font-weight: 400;
+      text-decoration: line-through;
+      color: #a4a39f;
+   }
+
+   // .prod-mini-slider__link
+
+   &__link {
+      font-size: 21px;
+      line-height: 119%;
+      color: #295e21;
+      padding: func.rem(0) func.rem(10);
+      display: block;
+
+      @media (max-width:bp.$md) {
+         font-size: 17px;
+         padding: 0;
+      }
+
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+
+      &::before {
+         content: '';
+         position: absolute;
+         inset: 0;
+      }
+   }
+}

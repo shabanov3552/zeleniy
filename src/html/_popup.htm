@@ -65,13 +65,7 @@
 					</button>
 				</div>
 				<div class="popup__main">
-					<div class="popup__text">Мы свяжемся с вами в ближайшее время для уточнения информации</div>
-					<button data-close type="button" class="popup__close">
-						Ok
-					</button>
-					<div class="popup__icon">
-						<img src="@img/icons/popup__icon.svg" alt="">
-					</div>
+					<div class="popup__text">Наш менеджер свяжется с вами <br> в ближайшее время</div>
 				</div>
 			</div>
 		</div>
@@ -90,33 +84,33 @@
 					</button>
 				</div>
 				<div class="popup__main">
-					<div class="popup__text">Оставьте контактные данные и мы вам перезвоним</div>
+					<div class="popup__text">Оставьте контактные данные и мы свяжемся с Вами для уточнения деталей</div>
 					<div class="popup__form">
 						<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
 							<div class="form__line">
-								<label for="p-callback-2.1" class="form__label">Ваше имя</label>
-								<input id="p-callback-2.1" type="text" class="form__input">
+								<label for="" class="form__label">Ваше имя *</label>
+								<input id="" type="text" class="form__input" required>
 								<svg class="form__clear-svg">
 									<use xlink:href="img/icons/icons.svg#input_clear"></use>
 								</svg>
 							</div>
 							<div class="form__line">
-								<label for="p-callback-2.2" class="form__label">Телефон *</label>
-								<input required id="p-callback-2.2" type="tel" class="form__input js_phone">
+								<label for="" class="form__label">Телефон *</label>
+								<input required id="" type="tel" class="form__input js_phone">
 								<svg class="form__clear-svg">
 									<use xlink:href="img/icons/icons.svg#input_clear"></use>
 								</svg>
 							</div>
 							<div class="form__line">
-								<label for="p-callback-2.3" class="form__label">Комментарий</label>
-								<textarea id="p-callback-2.3" autocomplete="off" name="" placeholder="" class="form__input"></textarea>
+								<label for="" class="form__label">Комментарий</label>
+								<input id="" autocomplete="off" name="" placeholder="" class="form__input">
 								<svg class="form__clear-svg">
 									<use xlink:href="img/icons/icons.svg#input_clear"></use>
 								</svg>
 							</div>
 							<div class="form__footer">
 								<button type="submit" class="form__button btn btn_red">Отправить</button>
-								<div class="form__consent">Отправляя данные, я даю свое <a href="" class="form__consent-link">согласие на обработку перс. данных</a></div>
+								<div class="form__consent">Я даю свое <a href="" class="form__consent-link">согласие на обработку персональных данных</a></div>
 							</div>
 						</form>
 					</div>
@@ -125,7 +119,49 @@
 		</div>
 	</div>
 	<!-- Заказать звонок -->
-	<div id="basket" aria-hidden="true" class="popup popup-basket">
+	<!-- Заказ товара -->
+	<div id="product-order" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__header">
+					<div class="popup__title">Заказ товара</div>
+					<button data-close type="button" class="popup__close">
+						<svg class="">
+							<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="popup__main">
+					<div class="popup__text">Оставьте контактные данные и мы свяжемся с Вами для уточнения деталей</div>
+					<div class="popup__form">
+						<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
+							<div class="form__line">
+								<label for="" class="form__label">Ваше имя *</label>
+								<input id="" type="text" class="form__input" required>
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<div class="form__line">
+								<label for="" class="form__label">Телефон *</label>
+								<input required id="" type="tel" class="form__input js_phone">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<div class="form__footer">
+								<button type="submit" class="form__button btn btn_red">Заказать</button>
+								<div class="form__consent">Я даю свое <a href="" class="form__consent-link">согласие на обработку персональных данных</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Заказ товара -->
+	<!-- Корзина -->
+	<div id="basket" aria-hidden="true" class="popup popup-basket"> <!-- Добавить класс basket-empty когда корзина пустая -->
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<div class="popup__header">
@@ -138,6 +174,24 @@
 				</div>
 				<div class="popup__main">
 					<div class="basket">
+						<!-- Вставить когда корзина пустая -->
+
+						<!-- <div class="basket__center">
+							<div class="basket__empty-logo">
+								<svg class="basket__empty-icon">
+									<use xlink:href="img/icons/icons.svg#basket_empty"></use>
+								</svg>
+							</div>
+							<div class="basket__empty-text">В корзине <br>пока ничего нет</div>
+							<div class="basket__sub-text">
+								<span>Помощь в покупке</span>
+								<a href="tel:88001234567">8 800 123 45 67</a>
+							</div>
+						</div> -->
+
+						<!-- Вставить когда корзина пустая -->
+
+						<!-- Убрать когда корзина пустая -->
 						<div class="basket__items">
 							<div class="basket-item">
 								<div class="basket-item__image-ibg"><img src="@img/basket_2.png" alt=""></div>
@@ -148,7 +202,7 @@
 											<button type="button" class="basket-item__delete hover-overlay">
 												<img src="@img/icons/icon_basket-del.svg" alt="">
 											</button>
-											<button type="button" class="basket-item__favorite">
+											<button type="button" class="basket-item__favorite _active">
 												<svg>
 													<use xlink:href="img/icons/icons.svg#icon_basket-fav"></use>
 												</svg>
@@ -216,7 +270,7 @@
 									<div class="basket-summary__name">Итого</div>
 									<div class="basket-summary__value">10200 <span>₽</span></div>
 								</div>
-								<a href="" class="basket-summary__checkout">Оформить заказ</a>
+								<a href="" class="basket-summary__checkout green-button">Оформить заказ</a>
 								<div class="basket-summary__note">Способ и время доставки можно выбрать при оформлении заказа</div>
 							</div>
 						</div>
@@ -230,9 +284,295 @@
 								</div>
 							</div>
 						</div>
+						<!-- Убрать когда корзина пустая -->
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- Корзина -->
+	<!-- Поиск -->
+	<div id="search" aria-hidden="true" class="popup popup-search">
+		<div class="popup__wrapper">
+			<form action="" class="popup__content form">
+				<div class="popup__header">
+					<div class="popup__title">Поиск</div>
+					<div class="form__line">
+						<input id="" type="text" name="" class="form__input">
+						<svg class="form__clear-svg">
+							<use xlink:href="img/icons/icons.svg#input_clear"></use>
+						</svg>
+						<img src="img/icons/icon_search.svg" alt="" class="form__input-search-icon">
+					</div>
+					<button data-close type="button" class="popup__close">
+						<svg class="popup__close-svg">
+							<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="popup__main">
+					<div class="live-search">
+						<a href="" class="live-search__link">Авторские букеты</a>
+						<a href="" class="live-search__link">Монобукеты</a>
+						<div class="live-search__card">
+							<div class="live-search__card-ibg"><img src="@img/product-card_1.png" alt=""></div>
+							<div class="live-search__card-info">
+								<div class="live-search__card-prices">
+									<div class="live-search__card-price">5450 <span>₽</span></div>
+									<div class="live-search__card-old-price">5750 ₽</div>
+								</div>
+								<a href="" class="live-search__card-link">Желто-розовый букет из альстромерии</a>
+							</div>
+						</div>
+						<div class="live-search__card">
+							<div class="live-search__card-ibg"><img src="@img/product-card_2.png" alt=""></div>
+							<div class="live-search__card-info">
+								<div class="live-search__card-prices">
+									<div class="live-search__card-price">1450 <span>₽</span></div>
+									<div class="live-search__card-old-price">5750 ₽</div>
+								</div>
+								<a href="" class="live-search__card-link">Букет с сиреневыми розами</a>
+							</div>
+						</div>
+					</div>
+					<div class="live-search__footer">
+						<button type="submit" class="form__button green-button">Показать все</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- Поиск -->
+	<!-- Вход или регистрация 1 -->
+	<div id="authentication_1" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__header">
+					<div class="popup__title">Вход <br>
+						или регистрация</div>
+					<button data-close type="button" class="popup__close">
+						<svg class="popup__close-svg">
+							<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="popup__main">
+					<div class="popup__form">
+						<form action="" class="form">
+							<div class="form__line">
+								<label for="" class="form__label">Телефон *</label>
+								<input required id="" type="tel" name="" class="form__input js_phone">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<button type="submit" class="form__button">Авторизоваться</button>
+						</form>
+					</div>
+					<div class="popup-links">
+						<a href="" class="popup-link" data-popup="#registration">Регистрация</a>
+						<a href="" class="popup-link" data-popup="#forgot-pass">Забыли пароль?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Вход или регистрация 1 -->
+	<!-- Вход или регистрация 2 -->
+	<div id="authentication_2" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__header">
+					<div class="popup__title">Вход <br>
+						или регистрация</div>
+					<button data-close type="button" class="popup__close">
+						<svg class="popup__close-svg">
+							<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="popup__main">
+					<div class="popup__form">
+						<form action="" class="form">
+							<div class="form__line">
+								<label for="" class="form__label">Телефон</label>
+								<input required id="" type="tel" name="" class="form__input js_phone">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<div class="form__line">
+								<label for="" class="form__label">Пароль</label>
+								<input id="" type="password" name="" class="form__input">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<button type="submit" class="form__button">Авторизоваться</button>
+						</form>
+					</div>
+					<div class="popup-links">
+						<a href="" class="popup-link" data-popup="#registration">Регистрация</a>
+						<a href="" class="popup-link" data-popup="#forgot-pass">Забыли пароль?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Вход или регистрация 2 -->
+	<!-- Вход или регистрация 3 -->
+	<div id="authentication_3" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__header">
+					<div class="popup__title">Вход <br>
+						или регистрация</div>
+					<button data-close type="button" class="popup__close">
+						<svg class="popup__close-svg">
+							<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="popup__main">
+					<div class="popup__text">
+						Вам был отправлен код
+						на номер 8-923-456-78-90
+					</div>
+					<div class="popup__text">
+						Теперь вы можете использовать этот код
+						в качестве пароля или изменить его
+						на любой другой в личном кабинете
+					</div>
+					<div class="popup__form">
+						<form action="" class="form">
+							<div class="form__line">
+								<label for="" class="form__label">Пароль</label>
+								<input id="" type="password" name="" class="form__input">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<button type="submit" class="form__button">Авторизоваться</button>
+							<div class="form__consent">Я даю <a href="" class="form__consent-link">согласие на обработку персональных данных</a></div>
+							<div class="popup-links popup-links_col">
+								<a href="" class="popup-link">Отправить код еще раз</a>
+								<a href="" class="popup-link">Ввести другой номер</a>
+							</div>
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" checked>
+								<div class="checkbox__chunk"></div>
+								<span class="checkbox__text">Я согласен на получение рекламных SMS, e-mail рассылок, а также рассылок по иным каналам связи</span>
+							</label>
+						</form>
+					</div>
+					<div class="popup__text">
+						Обращаем ваше внимание, что Вы в любой момент сможете отписаться от рассылок магазина «Зеленый» в Личном кабинете, разделе Управление рассылками.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Вход или регистрация 3 -->
+	<!-- Изменение данных -->
+	<div id="change-data" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__header">
+					<div class="popup__title">Изменение <br> данных</div>
+					<button data-close type="button" class="popup__close">
+						<svg class="popup__close-svg">
+							<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="popup__main">
+					<div class="popup__form">
+						<form action="" class="form">
+							<div class="form__line">
+								<label for="" class="form__label">ФИО</label>
+								<input id="" type="text" name="" class="form__input">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<div class="form__line">
+								<label for="" class="form__label">Номер телефона</label>
+								<input required id="" type="tel" name="" class="form__input js_phone">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<div class="form__line">
+								<label for="" class="form__label">E-mail</label>
+								<input required id="" type="email" name="" class="form__input">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<div class="form__line">
+								<label for="" class="form__label">Адрес доставки</label>
+								<input id="" type="text" name="" class="form__input">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<button type="submit" class="form__button">Сохранить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Изменение данных -->
+	<!-- Добавить профиль -->
+	<div id="add-profile" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__header">
+					<div class="popup__title">Добавить <br> профиль</div>
+					<button data-close type="button" class="popup__close">
+						<svg class="popup__close-svg">
+							<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="popup__main">
+					<div class="popup__form">
+						<form action="" class="form">
+							<div class="form__line">
+								<label for="" class="form__label">ФИО</label>
+								<input id="" type="text" name="" class="form__input">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<div class="form__line">
+								<label for="" class="form__label">Номер телефона</label>
+								<input required id="" type="tel" name="" class="form__input js_phone">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<div class="form__line">
+								<label for="" class="form__label">E-mail</label>
+								<input required id="" type="email" name="" class="form__input">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<div class="form__line">
+								<label for="" class="form__label">Адрес доставки</label>
+								<input id="" type="text" name="" class="form__input">
+								<svg class="form__clear-svg">
+									<use xlink:href="img/icons/icons.svg#input_clear"></use>
+								</svg>
+							</div>
+							<button type="submit" class="form__button">Сохранить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Добавить профиль -->
 </div>

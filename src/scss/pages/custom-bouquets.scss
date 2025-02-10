@@ -1,0 +1,95 @@
+@use '../config/breakpoints' as bp;
+@use '../config/variables' as var;
+@use '../config/functions' as func;
+@use '../config/mixins' as mixin;
+
+.custom-bouquets {
+   max-width: 1800px;
+   margin: 0 auto;
+   margin-bottom: func.rem(140);
+
+   @media (max-width:bp.$md) {
+      margin-bottom: func.rem(40);
+   }
+
+   // .custom-bouquets__grid
+
+   &__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 70px 60px;
+      margin-bottom: func.rem(70);
+
+      @media (max-width:bp.$xxl) {
+         gap: 40px 30px;
+      }
+
+      @media (max-width:bp.$lg) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width:bp.$md) {
+         gap: 18px 10px;
+         margin-bottom: func.rem(48);
+      }
+   }
+
+   // .custom-bouquets__link
+
+   &__link {
+      display: block;
+      font-size: 21px;
+      line-height: 119%;
+      color: var(--green-text-color);
+
+      @media (max-width:bp.$md) {
+         font-size: 17px;
+      }
+   }
+
+   // .custom-bouquets__image-ibg
+
+   &__image-ibg {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: func.rem(15);
+      @include mixin.adaptiveValue("height", 746, 216, 0, 1920, 375);
+   }
+
+   // .custom-bouquets__pagging
+
+   &__pagging {
+      margin-bottom: func.rem(100);
+
+      @media (max-width:bp.$md) {
+         margin-bottom: func.rem(30);
+      }
+   }
+
+   // .custom-bouquets__form
+
+   &__form {
+      max-width: 840px;
+      margin: 0 auto;
+   }
+
+   // .custom-bouquets__title
+
+   &__title {
+      margin-bottom: func.rem(5);
+   }
+
+   // .custom-bouquets__text
+
+   &__text {
+      font-size: 21px;
+      line-height: 143%;
+      margin-bottom: func.rem(78);
+      text-align: center;
+
+      @media (max-width:bp.$md) {
+         font-size: 17px;
+         margin-bottom: func.rem(30);
+      }
+   }
+}

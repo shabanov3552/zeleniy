@@ -1,0 +1,260 @@
+@@include('html/_header.htm',{
+"title":"Оформление заказа",
+"modClass":""
+})
+<main class="page">
+   <div class="page__container">
+      @@include('html/_breadcrumbs.htm',{})
+      <div class="page__title title-cormorant title-cormorant_brown">Оформление заказа</div>
+
+      <div class="order">
+         <form data-parsley-validate="" data-parsley-trigger="change" action="" class="order__form form">
+            <div class="order__wrapper">
+               <div class="order__sidebar">
+                  <div class="order__sidebar-inner">
+                     <div class="order__total">
+                        <div class="order__total-row">
+                           <div class="order__total-name">Стоимость</div>
+                           <div class="order__total-value">10450 ₽</div>
+                        </div>
+                        <div class="order__total-row">
+                           <div class="order__total-name">Скидка</div>
+                           <div class="order__total-value">250 ₽</div>
+                        </div>
+                        <div class="order__total-row">
+                           <div class="order__total-name">Доставка</div>
+                           <div class="order__total-value">250 ₽</div>
+                        </div>
+                        <div class="order__total-row">
+                           <div class="order__total-name">Итого</div>
+                           <div class="order__total-value">10200 ₽</div>
+                        </div>
+                        <!-- <div class="order__total-bg">
+                           <img src="@img/icons/total-bottom-bg.svg" alt="">
+                        </div> -->
+                     </div>
+                     <div class="order__promotion">
+                        <div class="order__promotion-line form__line">
+                           <label for="promotion" class="form__label">Промокод</label>
+                           <input id="promotion" type="text" name="text" class="form__input">
+                           <svg class="form__clear-svg">
+                              <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                           </svg>
+                        </div>
+                        <button type="button" class="order__promo-btn">
+                           <svg>
+                              <use xlink:href="img/icons/icons.svg#icon_enter"></use>
+                           </svg>
+                        </button>
+                     </div>
+                     <div class="order__promotion-status">
+                        <div class="status-message status-message_success">
+                           <div class="status-message__text">Промокод успешно применен</div>
+                        </div>
+                        <div class="status-message status-message_failure">
+                           <div class="status-message__text">Введен неверный промокод</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="order__main">
+
+                  <div class="order__basket basket-order">
+                     <div class="order__block-title">Состав заказа</div>
+                     <ul class="basket-order__list">
+                        <li class="basket-order__item">
+                           <a href="" class="basket-order__link">
+                              <div class="basket-order__image"><img src="@img/mp-fb_2.png" alt=""></div>
+                              <div class="basket-order__info">
+                                 <div class="basket-order__name">Желто-розовый букет</div>
+                                 <div class="basket-order__prices">
+                                    <div class="basket-order__price">5450 ₽</div>
+                                    <div class="basket-order__count">1 шт.</div>
+                                    <div class="basket-order__total">5450 ₽</div>
+                                 </div>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="basket-order__item">
+                           <a href="" class="basket-order__link">
+                              <div class="basket-order__image"><img src="@img/mp-fb_3.png" alt=""></div>
+                              <div class="basket-order__info">
+                                 <div class="basket-order__name">Желто-розовый букет</div>
+                                 <div class="basket-order__prices">
+                                    <div class="basket-order__price">1000 ₽</div>
+                                    <div class="basket-order__count">5 шт.</div>
+                                    <div class="basket-order__total">5000 ₽</div>
+                                 </div>
+                              </div>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="order__block order__block_delivery">
+                     <div class="order__block-title">Способ доставки</div>
+                     <div class="radio-buttons">
+                        <div class="radio-buttons__item">
+                           <label class="radio-buttons__label">
+                              <input class="radio-buttons__input" type="radio" value="1" name="delivery-place" checked>
+                              <div class="radio-buttons__inner">
+                                 <span class="radio-buttons__name">Самовывоз</span>
+                                 <span class="radio-buttons__text">По адресу ул. 78 Добровольческой Бригады, 2</span>
+                              </div>
+                           </label>
+                        </div>
+                        <div class="radio-buttons__item">
+                           <label class="radio-buttons__label">
+                              <input class="radio-buttons__input" type="radio" value="2" name="delivery-place">
+                              <div class="radio-buttons__inner">
+                                 <span class="radio-buttons__name">Курьером</span>
+                                 <span class="radio-buttons__text">Доставка за пределы Красноярска обсуждается индивидуально</span>
+                              </div>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="order__block order__block_pay">
+                     <div class="order__block-title">Способ оплаты</div>
+                     <div class="radio-buttons">
+                        <div class="radio-buttons__item">
+                           <label class="radio-buttons__label">
+                              <input class="radio-buttons__input" type="radio" value="1" name="pay" checked>
+                              <div class="radio-buttons__inner">
+                                 <span class="radio-buttons__name">Наличные</span>
+                              </div>
+                           </label>
+                        </div>
+                        <div class="radio-buttons__item">
+                           <label class="radio-buttons__label">
+                              <input class="radio-buttons__input" type="radio" value="2" name="pay">
+                              <div class="radio-buttons__inner">
+                                 <span class="radio-buttons__name">Банковской картой</span>
+                              </div>
+                           </label>
+                        </div>
+                        <div class="radio-buttons__item">
+                           <label class="radio-buttons__label">
+                              <input class="radio-buttons__input" type="radio" value="3" name="pay">
+                              <div class="radio-buttons__inner">
+                                 <span class="radio-buttons__name">Счет на оплату</span>
+                                 <span class="radio-buttons__text">для юридических лиц</span>
+                              </div>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="order__block order__block_delivery-time">
+                     <div class="order__block-title">Время доставки</div>
+                     <div class="radio-buttons">
+                        <div class="radio-buttons__item">
+                           <label class="radio-buttons__label">
+                              <input class="radio-buttons__input" type="radio" value="1" name="deliveryTime" checked>
+                              <div class="radio-buttons__inner">
+                                 <span class="radio-buttons__name">Ближайшее</span>
+                              </div>
+                           </label>
+                        </div>
+                        <div class="radio-buttons__item">
+                           <label class="radio-buttons__label">
+                              <input class="radio-buttons__input" type="radio" value="2" name="deliveryTime">
+                              <div class="radio-buttons__inner">
+                                 <span class="radio-buttons__name">На определенное время</span>
+                              </div>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+               <div class="order__footer">
+                  <div class="order__block order__block_user-info">
+                     <div class="order__block-title">Информация о покупателе</div>
+                     <div class="order__row">
+                        <div class="order__col">
+                           <div class="order__line form__line">
+                              <label for="" class="form__label">Ваше имя *</label>
+                              <input id="" required type="text" name="text" class="form__input">
+                              <svg class="form__clear-svg">
+                                 <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                              </svg>
+                           </div>
+                           <div class="order__line form__line">
+                              <label for="" class="form__label">Номер телефона *</label>
+                              <input id="" required type="tel" name="tel" class="form__input js_phone">
+                              <svg class="form__clear-svg">
+                                 <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                              </svg>
+                           </div>
+                           <div class="order__line form__line">
+                              <label for="" class="form__label">E-mail</label>
+                              <input id="" type="email" name="email" class="form__input">
+                              <svg class="form__clear-svg">
+                                 <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                              </svg>
+                           </div>
+                        </div>
+                        <div class="order__col">
+                           <div class="order__line form__line">
+                              <label for="" class="form__label">Имя получателя</label>
+                              <input id="" type="text" name="text" class="form__input">
+                              <svg class="form__clear-svg">
+                                 <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                              </svg>
+                           </div>
+                           <div class="order__line form__line">
+                              <label for="" class="form__label">Телефон получателя</label>
+                              <input id="" type="tel" name="tel" class="form__input js_phone">
+                              <svg class="form__clear-svg">
+                                 <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                              </svg>
+                           </div>
+                           <div class="order__line form__line">
+                              <label for="" class="form__label">Комментарий к заказу</label>
+                              <input id="" type="text" name="" class="form__input">
+                              <svg class="form__clear-svg">
+                                 <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="order__block order__block_addres">
+                     <div class="order__block-title">Адрес доставки</div>
+                     <div class="order__row">
+                        <div class="order__line form__line">
+                           <label for="" class="form__label">Улица, дом, корпус, квартира</label>
+                           <input id="" type="text" name="" class="form__input">
+                           <svg class="form__clear-svg">
+                              <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="order__block order__block_note">
+                     <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox">
+                        <div class="checkbox__chunk"></div>
+                        <span class="checkbox__text">Записка на нашей визитке</span>
+                        <span class="checkbox__text checkbox__text_grey">бесплатно, до 1000 символов</span>
+                     </label>
+                     <div class="form__line">
+                        <label for="" class="form__label">Текст</label>
+                        <input id="" type="text" name="" class="form__input">
+                        <svg class="form__clear-svg">
+                           <use xlink:href="img/icons/icons.svg#input_clear"></use>
+                        </svg>
+                     </div>
+                  </div>
+                  <div class="order__block order__block_bottom">
+                     <div class="order__row">
+                        <button type="submit" class="order__button green-button">Оформить заказ</button>
+                        <div class="order__consent">Я даю свое <a href="" class="order__consent-link">согласие на обработку персональных данных</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})

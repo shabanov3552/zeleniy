@@ -8,7 +8,7 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectFade, FreeMode } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade, FreeMode, Thumbs } from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -101,9 +101,9 @@ function initSliders() {
 			},
 			*/
 			// События
-			on: {
+			// on: {
 
-			}
+			// }
 		});
 	}
 
@@ -180,9 +180,9 @@ function initSliders() {
 			},
 			*/
 			// События
-			on: {
+			// on: {
 
-			}
+			// }
 		});
 	}
 
@@ -509,8 +509,189 @@ function initSliders() {
 			},
 
 			// События
-			on: {
+			// on: {
 
+			// }
+		});
+	}
+
+	if (document.querySelector('.product-detail-slider__main')) { // Указываем скласс нужного слайдера
+		let thumbsProdSlider = new Swiper('.product-detail-slider__thumbs', {
+			grabCursor: true,
+			spaceBetween: 35,
+			slidesPerView: 'auto',
+			direction: "vertical",
+			breakpoints: {
+				320: {
+					spaceBetween: 10,
+				},
+				991.98: {
+					spaceBetween: 35,
+				},
+			},
+		})
+		// Создаем слайдер
+		let mainProdSLider = new Swiper('.product-detail-slider__main', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Thumbs],
+			slidesPerView: 1,
+			spaceBetween: 10,
+			thumbs: {
+				swiper: thumbsProdSlider,
+			},
+			// speed: 800,
+			// observer: true,
+			// observeParents: true,
+			// autoHeight: true,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+			/*
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			*/
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			// navigation: {
+			// 	prevEl: '.product-detail-slider__nav .swiper-button-prev',
+			// 	nextEl: '.product-detail-slider__nav .swiper-button-next',
+			// },
+
+			// Брейкпоинты
+			/*
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			},
+			*/
+			// События
+			// on: {
+
+			// }
+		});
+	}
+
+	if (document.querySelector('.prod-mini-slider__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.prod-mini-slider__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, FreeMode],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			// spaceBetween: 36,
+			// autoHeight: true,
+			speed: 300,
+			freeMode: {
+				enabled: true
+			},
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+			/*
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			*/
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.prod-mini-slider__button-prev',
+				nextEl: '.prod-mini-slider__button-next',
+			},
+
+			// Брейкпоинты
+			/*
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			},
+			*/
+			// События
+			on: {
+				lock: function () {
+					this.el.classList.add('swiper-lock')
+				},
+				unlock: function () {
+					this.el.classList.remove('swiper-lock')
+				},
 			}
 		});
 	}
