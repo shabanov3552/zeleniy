@@ -1,0 +1,132 @@
+@use '../config/breakpoints' as bp;
+@use '../config/variables' as var;
+@use '../config/functions' as func;
+@use '../config/mixins' as mixin;
+
+.delivery {
+   max-width: 1050px;
+   margin: 0 auto;
+   margin-bottom: func.rem(50);
+
+
+   // .delivery__top
+
+   &__top {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-bottom: func.rem(70);
+
+      @media (max-width:bp.$lg) {
+         grid-template-columns: 1fr;
+         gap: 33px;
+         padding: func.rem(0) func.rem(52.5);
+      }
+
+      @media (max-width:bp.$md) {
+         margin-bottom: func.rem(25);
+      }
+
+      @media (max-width:bp.$sm) {
+         padding: 0;
+      }
+   }
+
+   // .delivery__item
+
+   &__item {
+      display: grid;
+      grid-template-columns: 39px 1fr;
+      gap: 30px;
+      align-items: center;
+
+      @media (max-width:bp.$md) {
+         gap: 16px;
+      }
+
+      img {
+         max-width: 100%;
+         justify-self: center;
+      }
+   }
+
+   // .delivery__text
+
+   &__text {
+      font-size: 21px;
+      line-height: 143%;
+
+      @media (max-width:bp.$md) {
+         font-size: 17px;
+      }
+   }
+
+   // .delivery__zones
+
+   &__zones {
+      margin-left: func.rem(60);
+      margin-bottom: func.rem(50);
+      display: flex;
+      align-items: center;
+
+      @media (max-width:bp.$md) {
+         margin-bottom: func.rem(25);
+         display: block;
+      }
+
+      @media (max-width:bp.$sm) {
+         margin-left: 0;
+      }
+   }
+
+   // .delivery__zones-list
+
+   &__zones-list {
+      margin-left: func.rem(20);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      @media (max-width:bp.$md) {
+         margin-left: 0;
+         margin-top: func.rem(10);
+      }
+   }
+
+   // .delivery__zone-item
+
+   &__zone-item {
+      font-size: 21px;
+      color: #fff;
+      border-radius: 2px;
+      padding: func.rem(4.5) func.rem(10);
+      // .delivery__zone-item_frst
+
+      &_frst {
+         background: #75c28b;
+      }
+
+      // .delivery__zone-item_snd
+
+      &_snd {
+         background: #eb79ec;
+      }
+
+      // .delivery__zone-item_trd
+
+      &_trd {
+         background: #9b8ee7;
+      }
+   }
+
+   // .delivery__map
+
+   &__map {
+      height: 700px;
+
+      @media (max-width:bp.$md) {
+         height: 350px;
+      }
+   }
+}

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Доставка</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fdfbf5">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap&_v=20250218020111" rel="stylesheet">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250218020111">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper ">
+		<header class="header">
+			<div class="header__container">
+				<a href="" class="header__logo"><img src="img/logo.webp" alt=""></a>
+				<div class="header__menu dropdown" data-dropdown>
+					<button type="button" class="dropdown__button hover-overlay" data-dropdown-button><img src="img/icons/icon_menu.svg" alt=""></button>
+					<div class="dropdown__block">
+						<div class="dropdown__links">
+							<a href="" class="header__menu-link dropdown__link">Доставка</a>
+							<a href="" class="header__menu-link dropdown__link">Оплата</a>
+							<a href="" class="header__menu-link dropdown__link">Программа лояльности</a>
+							<a href="" class="header__menu-link dropdown__link">Корпоративным клиентам</a>
+							<a href="" class="header__menu-link dropdown__link">О компании</a>
+							<a href="" class="header__menu-link dropdown__link">Контакты</a>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="header__catalog-btn hover-overlay js-open-sidebar-catalog"><span>Каталог</span><img src="img/icons/icon_dropdown.svg" alt=""></button>
+				<button type="button" class="header__search-btn hover-overlay" data-popup="#search"><span>Поиск</span><img src="img/icons/icon_search.svg" alt=""></button>
+				<div class="header__contacts">
+					<a href="" class="header__contacts-link hover-overlay"><img src="img/icons/icon_tg.svg" alt=""></a>
+					<a href="" class="header__contacts-link hover-overlay"><img src="img/icons/icon_wa.svg" alt=""></a>
+					<div class="header__contacts-drop dropdown" data-dropdown>
+						<a href="tel:+7 391 271 11 41" class="dropdown__button" data-dropdown-button="hover">+7 391 271 11 41</a>
+						<div class="dropdown__block">
+							<div class="dropdown__links">
+								<a href="tel:+79069145771" class="dropdown__link">+7 906 914 57 71</a>
+								<button type="button" class="dropdown__link dropdown__link_green" data-popup="#callback">Перезвоните мне</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__nav-panel">
+					<div class="nav-panel">
+						<a href="" class="nav-panel__item hover-overlay">
+							<img src="img/icons/nav-icon_delivery.svg" alt="">
+							<!-- <img src="img/icons/nav-icon_delivery_active.svg" alt=""> -->
+							<span>Доставка</span>
+						</a>
+						<a href="" class="nav-panel__item hover-overlay">
+							<img src="img/icons/nav-icon_favorites.svg" alt="">
+							<!-- <img src="img/icons/nav-icon_favorites_active.svg" alt=""> -->
+							<span>Избранное</span>
+						</a>
+						<a href="" class="nav-panel__item hover-overlay">
+							<img src="img/icons/nav-icon_profile.svg" alt="">
+							<!-- <img src="img/icons/nav-icon_profile_active.svg" alt=""> -->
+							<span>Профиль</span>
+						</a>
+						<button type="button" class="nav-panel__item hover-overlay" data-popup="#basket">
+							<img src="img/icons/nav-icon_basket.svg" alt="">
+							<!-- <img src="img/icons/nav-icon_basket_active.svg" alt=""> -->
+							<span>Корзина</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar-catalog">
+
+				<div class="sidebar-catalog__body">
+
+					<div class="sidebar-catalog__header"> <!-- sidebar-catalog__header виден только на мобилках -->
+						<button type="button" class="sidebar-catalog__back js-sidebar-catalog-back">
+							<svg class="sidebar-catalog__back-svg">
+								<use xlink:href="img/icons/icons.svg#arrow-back-sidebar-catalog"></use>
+							</svg>
+						</button>
+						<button type="button" class="sidebar-catalog__close js-sidebar-catalog-close">
+							<svg class="sidebar-catalog__close-svg">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="sidebar-catalog__menu-chunk">
+						<nav class="sidebar-catalog__menu">
+							<a href="" class="sidebar-catalog__link" data-parent="1">Букеты</a>
+							<a href="" class="sidebar-catalog__link" data-parent="2">Цветы</a>
+							<a href="" class="sidebar-catalog__link" data-parent="3">Подарки</a>
+							<a href="" class="sidebar-catalog__link" data-parent="4">Композиции</a>
+							<a href="" class="sidebar-catalog__link" data-parent="5">Повод</a>
+							<a href="" class="sidebar-catalog__link" data-parent="">Авторские букеты</a>
+						</nav>
+					</div>
+					<div class="sidebar-catalog__sub-catalog sidebar-sub-catalog">
+						<div class="sidebar-sub-catalog__wrapper">
+							<div data-submenu="1" class="sidebar-sub-catalog__chunk" hidden>
+
+								<div class="sidebar-sub-catalog__grid">
+									<a href="" class="sidebar-sub-catalog__link">Букеты из роз</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из тюльпанов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из пионов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из гербер</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из хризантем</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из орхидей</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из лилий</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из ранункулюсов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из эустом</a>
+									<a href="" class="sidebar-sub-catalog__link">Мужские букеты</a>
+									<a href="" class="sidebar-sub-catalog__link">Монобукеты</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из сухоцветов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты невесты</a>
+								</div>
+
+							</div>
+							<div data-submenu="2" class="sidebar-sub-catalog__chunk" hidden>
+
+								<div class="sidebar-sub-catalog__grid">
+									<a href="" class="sidebar-sub-catalog__link">Селедбно-сцепное устройство</a>
+									<a href="" class="sidebar-sub-catalog__link">Захваты седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Клинья седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Пальцы седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Подковы седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Подушки седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Пружины седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Шкворни седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Опоры седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Шкворни прицепные в сборе</a>
+									<a href="" class="sidebar-sub-catalog__link">Плиты опорные шкворней</a>
+									<a href="" class="sidebar-sub-catalog__link">Плиты монтажные</a>
+									<a href="" class="sidebar-sub-catalog__link">Опоры полуприцепов</a>
+									<a href="" class="sidebar-sub-catalog__link">Накладки опорных плит</a>
+									<a href="" class="sidebar-sub-catalog__link">Втулки сцепного устройства</a>
+									<a href="" class="sidebar-sub-catalog__link">Пальцы дышла</a>
+									<a href="" class="sidebar-sub-catalog__link">Пальцы сцепных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Подушки прицепного устройства</a>
+									<a href="" class="sidebar-sub-catalog__link">Комплект монтажный седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты опоры седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты шкворней прицепных</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты опор полуприцепа</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты захвата сцепного устройства</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты пальца сцепного устройства</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты крепления сцепного устройства</a>
+								</div>
+
+							</div>
+							<div data-submenu="3" class="sidebar-sub-catalog__chunk" hidden>
+
+								<div class="sidebar-sub-catalog__grid">
+									<a href="" class="sidebar-sub-catalog__link">Букеты из роз</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из тюльпанов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из пионов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из гербер</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из хризантем</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из орхидей</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из лилий</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из ранункулюсов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из эустом</a>
+									<a href="" class="sidebar-sub-catalog__link">Мужские букеты</a>
+									<a href="" class="sidebar-sub-catalog__link">Монобукеты</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из сухоцветов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты невесты</a>
+								</div>
+
+							</div>
+							<div data-submenu="4" class="sidebar-sub-catalog__chunk" hidden>
+
+								<div class="sidebar-sub-catalog__grid">
+									<a href="" class="sidebar-sub-catalog__link">Селедбно-сцепное устройство</a>
+									<a href="" class="sidebar-sub-catalog__link">Захваты седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Клинья седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Пальцы седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Подковы седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Подушки седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Пружины седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Шкворни седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Опоры седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Шкворни прицепные в сборе</a>
+									<a href="" class="sidebar-sub-catalog__link">Плиты опорные шкворней</a>
+									<a href="" class="sidebar-sub-catalog__link">Плиты монтажные</a>
+									<a href="" class="sidebar-sub-catalog__link">Опоры полуприцепов</a>
+									<a href="" class="sidebar-sub-catalog__link">Накладки опорных плит</a>
+									<a href="" class="sidebar-sub-catalog__link">Втулки сцепного устройства</a>
+									<a href="" class="sidebar-sub-catalog__link">Пальцы дышла</a>
+									<a href="" class="sidebar-sub-catalog__link">Пальцы сцепных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Подушки прицепного устройства</a>
+									<a href="" class="sidebar-sub-catalog__link">Комплект монтажный седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты опоры седельных устройств</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты шкворней прицепных</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты опор полуприцепа</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты захвата сцепного устройства</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты пальца сцепного устройства</a>
+									<a href="" class="sidebar-sub-catalog__link">Ремкомплекты крепления сцепного устройства</a>
+								</div>
+
+							</div>
+							<div data-submenu="5" class="sidebar-sub-catalog__chunk" hidden>
+
+								<div class="sidebar-sub-catalog__grid">
+									<a href="" class="sidebar-sub-catalog__link">Букеты из роз</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из тюльпанов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из пионов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из гербер</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из хризантем</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из орхидей</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из лилий</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из ранункулюсов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из эустом</a>
+									<a href="" class="sidebar-sub-catalog__link">Мужские букеты</a>
+									<a href="" class="sidebar-sub-catalog__link">Монобукеты</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты из сухоцветов</a>
+									<a href="" class="sidebar-sub-catalog__link">Букеты невесты</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__li">
+							<a href="" class="breadcrumbs__link">
+								Главная
+							</a>
+						</li>
+						<li class="breadcrumbs__li">
+							<a href="" class="breadcrumbs__link">
+								Крошка
+							</a>
+						</li>
+						<li class="breadcrumbs__li">
+							<a href="" class="breadcrumbs__link">
+								Крошка
+							</a>
+						</li>
+						<li class="breadcrumbs__li">
+							<span class="breadcrumbs__item">Последняя крошка</span>
+						</li>
+					</ul>
+				</nav>
+				<div class="page__title title-cormorant title-cormorant_brown">Доставка</div>
+				<div class="delivery">
+					<div class="delivery__top">
+						<div class="delivery__item">
+							<img src="img/icons/del_1.svg" alt="">
+							<div class="delivery__text">Наша доставка работает <br> круглосуточно</div>
+						</div>
+						<div class="delivery__item">
+							<img src="img/icons/del_2.svg" alt="">
+							<div class="delivery__text">Принимаем заказы во время работы магазина: <br> с 9 до 20 каждый день.</div>
+						</div>
+						<div class="delivery__item">
+							<img src="img/icons/del_3.svg" alt="">
+							<div class="delivery__text">Доставка во внерабочее время <br> увеличивает тариф на 100 рублей</div>
+						</div>
+						<div class="delivery__item">
+							<img src="img/icons/del_4.svg" alt="">
+							<div class="delivery__text">Доставка за пределы г. Красноярска <br> обсуждаются индивидуально</div>
+						</div>
+					</div>
+					<div class="delivery__zones">
+						<div class="delivery__text">Зоны покрытия доставки</div>
+						<div class="delivery__zones-list">
+							<div class="delivery__zone-item delivery__zone-item_frst">250 ₽</div>
+							<div class="delivery__zone-item delivery__zone-item_snd">300 ₽</div>
+							<div class="delivery__zone-item delivery__zone-item_trd">350 ₽</div>
+						</div>
+					</div>
+					<div class="delivery__map">
+						<div id="map-delivery"></div>
+						<!-- я там добавил рандомные зоны доставки, там ещё для разных зон надо цвета разные, пока не стал делать. 
+            если че позже сделаем если этого ещё нет -->
+						<script>
+							if (document.querySelector('#map-delivery')) {
+								mapAdd();
+
+								function mapAdd() {
+									let tag = document.createElement('script');
+									tag.src = "https://api-maps.yandex.ru/v3/?apikey=0aa2f6b6-353d-4a10-bb62-97763a975ef4&lang=ru_RU";
+									let firstScriptTag = document.getElementsByTagName('script')[0];
+									firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+									tag.onload = () => initMap();
+								}
+
+								async function initMap() {
+									await ymaps3.ready;
+
+									const {
+										YMap,
+										YMapDefaultSchemeLayer,
+										YMapDefaultFeaturesLayer,
+										YMapFeature
+									} = ymaps3;
+
+									const map = new YMap(document.getElementById('map-delivery'), {
+										location: {
+											center: [92.91686085352818, 56.036527113797185],
+											zoom: 14,
+										}
+									});
+
+									map.addChild(new YMapDefaultSchemeLayer());
+									map.addChild(new YMapDefaultFeaturesLayer());
+
+									const coord1 = [
+										[92.90349984505978, 56.04685236148998],
+										[92.90907883981075, 56.043477509423646],
+										[92.89193415978754, 56.03482884862353],
+										[92.8928997550329, 56.0416878768428],
+										[92.90349984505978, 56.04685236148998]
+									];
+									const coord2 = [
+										[92.90277028420773, 56.04025851309843],
+										[92.90875697472896, 56.036636819883064],
+										[92.9087247882208, 56.03372360171427],
+										[92.89144063332881, 56.03372960857682],
+										[92.89193415978754, 56.03476277497326],
+										[92.90277028420773, 56.04025851309843]
+									];
+									const coord3 = [
+										[92.91492605546324, 56.03974801316128],
+										[92.91983986237852, 56.03676295423893],
+										[92.91985059121457, 56.03382571825039],
+										[92.90875697472896, 56.03374162229917],
+										[92.90879989007323, 56.03664282629035],
+										[92.91492605546324, 56.03974801316128]
+									];
+									const zonesCoord = [coord1, coord2, coord3]
+
+									const deliveryZone = new YMapFeature({
+										geometry: {
+											type: 'Polygon',
+											coordinates: zonesCoord
+										},
+										properties: {
+											hintContent: 'Зона доставки'
+										},
+										style: {
+											stroke: [{
+												width: 0,
+												color: 'none'
+											}],
+											fill: '#75c28b'
+										}
+									});
+									map.addChild(deliveryZone);
+								}
+							}
+						</script>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__wrapper">
+					<div class="footer__section footer__top">
+						<div class="footer__col">
+							<div class="footer__item footer__item_mobile-text-only footer__item_wide">
+								<img src="img/icons/icon_point.svg" alt="">
+								<span class="footer__text">ул. 78 Добровольческой Бригады, 2</span>
+								<a href="" class="footer__link footer__link_green">схема проезда</a>
+							</div>
+							<div class="footer__item footer__item_mobile-text-only">
+								<img src="img/icons/icon_watch.svg" alt="">
+								<span class="footer__text">9—20 ежедневно</span>
+							</div>
+						</div>
+						<div class="footer__col">
+							<div class="footer__item footer__item_mobile-text-only footer__item_wide">
+								<img src="img/icons/icon_phone.svg" alt="">
+								<a href="tel:+73912711141" class="footer__link">+7 391 271 11 41</a>
+								<a href="tel:+79069145771" class="footer__link">+7 906 914 57 71</a>
+							</div>
+							<div class="footer__item footer-hidden-mobile">
+								<img src="img/icons/icon_mail.svg" alt="">
+								<a href="mailto:info@greenmarket.ru" class="footer__link">info@greenmarket.ru</a>
+							</div>
+						</div>
+						<div class="footer__col footer__social">
+							<div class="footer__item">
+								<img src="img/icons/icon_tg.svg" alt="">
+								<a href="" class="footer__link">@greenmarket_ru</a>
+							</div>
+							<div class="footer__item">
+								<img src="img/icons/icon_wa.svg" alt="">
+								<a href="" class="footer__link">WhatsApp</a>
+							</div>
+							<div class="footer__item">
+								<img src="img/icons/icon_i.svg" alt="">
+								<a href="" class="footer__link">@greenmarket.ru</a>
+							</div>
+							<div class="footer__item">
+								<img src="img/icons/icon_vk.svg" alt="">
+								<a href="" class="footer__link">zelenii24</a>
+							</div>
+						</div>
+						<div class="footer__col">
+							<a href="" class="footer__link">Согласие на обработку <br> персональных данных</a>
+							<a href="" class="footer__link">Публичная оферта</a>
+							<a href="https://websalt.ru" target="_blank" class="copyright-link">
+								Создание сайта
+								<svg class="copyright-link__logo">
+									<use xlink:href="img/icons/icons.svg#logo_salt"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="footer__section footer__bottom">
+						<div class="footer__pay footer-hidden-mobile">
+							<div class="footer__text footer__text_gray">Принимаем к оплате</div>
+							<div class="footer__pay-row">
+								<img src="img/icons/pay_1.svg" alt="">
+								<img src="img/icons/pay_2.svg" alt="">
+								<img src="img/icons/pay_3.svg" alt="">
+							</div>
+						</div>
+						<div class="footer__text footer__text_gray">
+							© 2015-<span class="js-copyright-year">2023</span> «Зеленый» Все права защищены
+							<script>
+								window.onload = () => document.querySelector('.js-copyright-year').innerText = new Date().getFullYear();
+							</script>
+						</div>
+						<div class="footer__text footer__text_gray footer-hidden-mobile">
+							ИП Мустафина А.Р.<br>ИНН 245606134010
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__header">
+					<div class="popup__title">Заголовок</div>
+					<button data-close type="button" class="popup__close">
+						<svg class="popup__close-svg">
+							<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="popup__main">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup-box">
+		<!-- Модалка шаринга -->
+		<div id="share-popup" aria-hidden="true" class="popup popup_center">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__header">
+						<div class="popup__title">Поделиться</div>
+						<button data-close type="button" class="popup__close">
+							<svg class="">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="popup__main">
+						<div class="share">
+							<div class="share__social">
+								<!-- uSocial -->
+								<script async src="https://usocial.pro/usocial/usocial.js?uid=21cd4b58eaf61697&v=6.1.5&_v=20250218020111" data-script="usocial" charset="utf-8"></script>
+								<div class="uSocial-Share" data-pid="b7450283dbc9e941ee22b283d6036804" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size48,eachCounter0,counter0,nomobile,mobile_position_right" data-social="vk,ok,telegram,wa,vi"></div>
+								<!-- /uSocial -->
+							</div>
+							<div class="share__copy-url">
+								<div class="form__line">
+									<label for="copyUrl" class="form__label">Ссылка на товар</label>
+									<input autocomplete="off" id="copyUrl" type="text" class="share__input form__input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<button type="button" class="share__button">Скопировать ссылку</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Модалка шаринга -->
+		<!-- Спасибо -->
+		<div id="thanks" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__header">
+						<div class="popup__title">Спасибо</div>
+						<button data-close type="button" class="popup__close">
+							<svg class="popup__close-svg">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="popup__main">
+						<div class="popup__text">Наш менеджер свяжется с вами <br> в ближайшее время</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Спасибо -->
+		<!-- Заказать звонок -->
+		<div id="callback" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__header">
+						<div class="popup__title">Заказ звонка</div>
+						<button data-close type="button" class="popup__close">
+							<svg class="">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="popup__main">
+						<div class="popup__text">Оставьте контактные данные и мы свяжемся с Вами для уточнения деталей</div>
+						<div class="popup__form">
+							<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
+								<div class="form__line">
+									<label for="" class="form__label">Ваше имя *</label>
+									<input id="" type="text" class="form__input" required>
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__line">
+									<label for="" class="form__label">Телефон *</label>
+									<input required id="" type="tel" class="form__input js_phone">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__line">
+									<label for="" class="form__label">Комментарий</label>
+									<input id="" autocomplete="off" name="" placeholder="" class="form__input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__footer">
+									<button type="submit" class="form__button btn btn_red">Отправить</button>
+									<div class="form__consent">Я даю свое <a href="" class="form__consent-link">согласие на обработку персональных данных</a></div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Заказать звонок -->
+		<!-- Заказ товара -->
+		<div id="product-order" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__header">
+						<div class="popup__title">Заказ товара</div>
+						<button data-close type="button" class="popup__close">
+							<svg class="">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="popup__main">
+						<div class="popup__text">Оставьте контактные данные и мы свяжемся с Вами для уточнения деталей</div>
+						<div class="popup__form">
+							<form action="" data-parsley-validate data-parsley-trigger="change" required="" class="form">
+								<div class="form__line">
+									<label for="" class="form__label">Ваше имя *</label>
+									<input id="" type="text" class="form__input" required>
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__line">
+									<label for="" class="form__label">Телефон *</label>
+									<input required id="" type="tel" class="form__input js_phone">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__footer">
+									<button type="submit" class="form__button btn btn_red">Заказать</button>
+									<div class="form__consent">Я даю свое <a href="" class="form__consent-link">согласие на обработку персональных данных</a></div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Заказ товара -->
+		<!-- Корзина -->
+		<div id="basket" aria-hidden="true" class="popup popup-basket"> <!-- Добавить класс basket-empty когда корзина пустая -->
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__header">
+						<div class="popup__title">Ваша корзина</div>
+						<button data-close type="button" class="popup__close">
+							<svg class="popup__close-svg">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="popup__main">
+						<div class="basket">
+							<!-- Вставить когда корзина пустая -->
+
+							<!-- <div class="basket__center">
+							<div class="basket__empty-logo">
+								<svg class="basket__empty-icon">
+									<use xlink:href="img/icons/icons.svg#basket_empty"></use>
+								</svg>
+							</div>
+							<div class="basket__empty-text">В корзине <br>пока ничего нет</div>
+							<div class="basket__sub-text">
+								<span>Помощь в покупке</span>
+								<a href="tel:88001234567">8 800 123 45 67</a>
+							</div>
+						</div> -->
+
+							<!-- Вставить когда корзина пустая -->
+
+							<!-- Убрать когда корзина пустая -->
+							<div class="basket__items">
+								<div class="basket-item">
+									<div class="basket-item__image-ibg"><img src="img/basket_2.webp" alt=""></div>
+									<div class="basket-item__info">
+										<div class="basket-item__top">
+											<a href="" class="basket-item__name">Желто-розовый букет</a>
+											<div class="basket-item__buttons">
+												<button type="button" class="basket-item__delete hover-overlay">
+													<img src="img/icons/icon_basket-del.svg" alt="">
+												</button>
+												<button type="button" class="basket-item__favorite _active">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#icon_basket-fav"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="basket-item__footer">
+											<div class="basket-item__price">5450 ₽</div>
+											<div class="basket-item__quantity">
+												<div data-quantity class="quantity">
+													<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+													<div class="quantity__input">
+														<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+													</div>
+													<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												</div>
+											</div>
+											<div class="basket-item__total-price">5450 ₽</div>
+										</div>
+									</div>
+								</div>
+								<div class="basket-item">
+									<div class="basket-item__image-ibg"><img src="img/basket_1.webp" alt=""></div>
+									<div class="basket-item__info">
+										<div class="basket-item__top">
+											<a href="" class="basket-item__name">Набор из 10 гелиевых шаров с собачкой</a>
+											<div class="basket-item__buttons">
+												<button type="button" class="basket-item__delete hover-overlay">
+													<img src="img/icons/icon_basket-del.svg" alt="">
+												</button>
+												<button type="button" class="basket-item__favorite">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#icon_basket-fav"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="basket-item__footer">
+											<div class="basket-item__price">1000 ₽</div>
+											<div class="basket-item__quantity">
+												<div data-quantity class="quantity">
+													<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+													<div class="quantity__input">
+														<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+													</div>
+													<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+												</div>
+											</div>
+											<div class="basket-item__total-price">5000 ₽</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="basket__summary">
+								<div class="basket-summary">
+									<div class="basket-summary__cost">
+										<div class="basket-summary__name">Стоимость</div>
+										<div class="basket-summary__value">10450 ₽</div>
+									</div>
+									<div class="basket-summary__cost">
+										<div class="basket-summary__name">Скидка</div>
+										<div class="basket-summary__value">250 ₽</div>
+									</div>
+									<div class="basket-summary__total">
+										<div class="basket-summary__name">Итого</div>
+										<div class="basket-summary__value">10200 <span>₽</span></div>
+									</div>
+									<a href="" class="basket-summary__checkout green-button">Оформить заказ</a>
+									<div class="basket-summary__note">Способ и время доставки можно выбрать при оформлении заказа</div>
+								</div>
+							</div>
+							<div class="basket__info">
+								<div class="basket-info">
+									<div class="basket-info__icon"><img src="img/icons/icon_basket-info.svg" alt=""></div>
+									<div class="basket-info__text">
+										Перед отправкой букета, <b>мы пришлем вам фотографию</b> собранного букета на WhatsApp или Telegram,
+										поэтому <b>убедитесь в правильности номера</b>, который вы укажете. Если какого-то цветка
+										не будет в наличии, то мы согласуем с Вами замену.
+									</div>
+								</div>
+							</div>
+							<!-- Убрать когда корзина пустая -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Корзина -->
+		<!-- Поиск -->
+		<div id="search" aria-hidden="true" class="popup popup-search">
+			<div class="popup__wrapper">
+				<form action="" class="popup__content form">
+					<div class="popup__header">
+						<div class="popup__title">Поиск</div>
+						<div class="form__line">
+							<input id="" type="text" name="" class="form__input">
+							<svg class="form__clear-svg">
+								<use xlink:href="img/icons/icons.svg#input_clear"></use>
+							</svg>
+							<img src="img/icons/icon_search.svg" alt="" class="form__input-search-icon">
+						</div>
+						<button data-close type="button" class="popup__close">
+							<svg class="popup__close-svg">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="popup__main">
+						<div class="live-search">
+							<a href="" class="live-search__link">Авторские букеты</a>
+							<a href="" class="live-search__link">Монобукеты</a>
+							<div class="live-search__card">
+								<div class="live-search__card-ibg"><img src="img/product-card_1.webp" alt=""></div>
+								<div class="live-search__card-info">
+									<div class="live-search__card-prices">
+										<div class="live-search__card-price">5450 <span>₽</span></div>
+										<div class="live-search__card-old-price">5750 ₽</div>
+									</div>
+									<a href="" class="live-search__card-link">Желто-розовый букет из альстромерии</a>
+								</div>
+							</div>
+							<div class="live-search__card">
+								<div class="live-search__card-ibg"><img src="img/product-card_2.webp" alt=""></div>
+								<div class="live-search__card-info">
+									<div class="live-search__card-prices">
+										<div class="live-search__card-price">1450 <span>₽</span></div>
+										<div class="live-search__card-old-price">5750 ₽</div>
+									</div>
+									<a href="" class="live-search__card-link">Букет с сиреневыми розами</a>
+								</div>
+							</div>
+						</div>
+						<div class="live-search__footer">
+							<button type="submit" class="form__button green-button">Показать все</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- Поиск -->
+		<!-- Вход или регистрация 1 -->
+		<div id="authentication_1" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__header">
+						<div class="popup__title">Вход <br>
+							или регистрация</div>
+						<button data-close type="button" class="popup__close">
+							<svg class="popup__close-svg">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="popup__main">
+						<div class="popup__form">
+							<form action="" class="form">
+								<div class="form__line">
+									<label for="" class="form__label">Телефон *</label>
+									<input required id="" type="tel" name="" class="form__input js_phone">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<button type="submit" class="form__button">Авторизоваться</button>
+							</form>
+						</div>
+						<div class="popup-links">
+							<a href="" class="popup-link" data-popup="#registration">Регистрация</a>
+							<a href="" class="popup-link" data-popup="#forgot-pass">Забыли пароль?</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Вход или регистрация 1 -->
+		<!-- Вход или регистрация 2 -->
+		<div id="authentication_2" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__header">
+						<div class="popup__title">Вход <br>
+							или регистрация</div>
+						<button data-close type="button" class="popup__close">
+							<svg class="popup__close-svg">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="popup__main">
+						<div class="popup__form">
+							<form action="" class="form">
+								<div class="form__line">
+									<label for="" class="form__label">Телефон</label>
+									<input required id="" type="tel" name="" class="form__input js_phone">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__line">
+									<label for="" class="form__label">Пароль</label>
+									<input id="" type="password" name="" class="form__input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<button type="submit" class="form__button">Авторизоваться</button>
+							</form>
+						</div>
+						<div class="popup-links">
+							<a href="" class="popup-link" data-popup="#registration">Регистрация</a>
+							<a href="" class="popup-link" data-popup="#forgot-pass">Забыли пароль?</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Вход или регистрация 2 -->
+		<!-- Вход или регистрация 3 -->
+		<div id="authentication_3" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__header">
+						<div class="popup__title">Вход <br>
+							или регистрация</div>
+						<button data-close type="button" class="popup__close">
+							<svg class="popup__close-svg">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="popup__main">
+						<div class="popup__text">
+							Вам был отправлен код
+							на номер 8-923-456-78-90
+						</div>
+						<div class="popup__text">
+							Теперь вы можете использовать этот код
+							в качестве пароля или изменить его
+							на любой другой в личном кабинете
+						</div>
+						<div class="popup__form">
+							<form action="" class="form">
+								<div class="form__line">
+									<label for="" class="form__label">Пароль</label>
+									<input id="" type="password" name="" class="form__input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<button type="submit" class="form__button">Авторизоваться</button>
+								<div class="form__consent">Я даю <a href="" class="form__consent-link">согласие на обработку персональных данных</a></div>
+								<div class="popup-links popup-links_col">
+									<a href="" class="popup-link">Отправить код еще раз</a>
+									<a href="" class="popup-link">Ввести другой номер</a>
+								</div>
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" checked>
+									<div class="checkbox__chunk"></div>
+									<span class="checkbox__text">Я согласен на получение рекламных SMS, e-mail рассылок, а также рассылок по иным каналам связи</span>
+								</label>
+							</form>
+						</div>
+						<div class="popup__text">
+							Обращаем ваше внимание, что Вы в любой момент сможете отписаться от рассылок магазина «Зеленый» в Личном кабинете, разделе Управление рассылками.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Вход или регистрация 3 -->
+		<!-- Изменение данных -->
+		<div id="change-data" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__header">
+						<div class="popup__title">Изменение <br> данных</div>
+						<button data-close type="button" class="popup__close">
+							<svg class="popup__close-svg">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="popup__main">
+						<div class="popup__form">
+							<form action="" class="form">
+								<div class="form__line">
+									<label for="" class="form__label">ФИО</label>
+									<input id="" type="text" name="" class="form__input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__line">
+									<label for="" class="form__label">Номер телефона</label>
+									<input required id="" type="tel" name="" class="form__input js_phone">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__line">
+									<label for="" class="form__label">E-mail</label>
+									<input required id="" type="email" name="" class="form__input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__line">
+									<label for="" class="form__label">Адрес доставки</label>
+									<input id="" type="text" name="" class="form__input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<button type="submit" class="form__button">Сохранить</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Изменение данных -->
+		<!-- Добавить профиль -->
+		<div id="add-profile" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__header">
+						<div class="popup__title">Добавить <br> профиль</div>
+						<button data-close type="button" class="popup__close">
+							<svg class="popup__close-svg">
+								<use xlink:href="img/icons/icons.svg#icon_close-modal"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="popup__main">
+						<div class="popup__form">
+							<form action="" class="form">
+								<div class="form__line">
+									<label for="" class="form__label">ФИО</label>
+									<input id="" type="text" name="" class="form__input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__line">
+									<label for="" class="form__label">Номер телефона</label>
+									<input required id="" type="tel" name="" class="form__input js_phone">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__line">
+									<label for="" class="form__label">E-mail</label>
+									<input required id="" type="email" name="" class="form__input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<div class="form__line">
+									<label for="" class="form__label">Адрес доставки</label>
+									<input id="" type="text" name="" class="form__input">
+									<svg class="form__clear-svg">
+										<use xlink:href="img/icons/icons.svg#input_clear"></use>
+									</svg>
+								</div>
+								<button type="submit" class="form__button">Сохранить</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Добавить профиль -->
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20250218020111" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20250218020111"></script>
+</body>
+
+</html>

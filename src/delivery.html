@@ -1,0 +1,47 @@
+@@include('html/_header.htm',{
+"title":"Доставка",
+"modClass":""
+})
+<main class="page">
+   <div class="page__container">
+      @@include('html/_breadcrumbs.htm',{})
+      <div class="page__title title-cormorant title-cormorant_brown">Доставка</div>
+      <div class="delivery">
+         <div class="delivery__top">
+            <div class="delivery__item">
+               <img src="@img/icons/del_1.svg" alt="">
+               <div class="delivery__text">Наша доставка работает <br> круглосуточно</div>
+            </div>
+            <div class="delivery__item">
+               <img src="@img/icons/del_2.svg" alt="">
+               <div class="delivery__text">Принимаем заказы во время работы магазина: <br> с 9 до 20 каждый день.</div>
+            </div>
+            <div class="delivery__item">
+               <img src="@img/icons/del_3.svg" alt="">
+               <div class="delivery__text">Доставка во внерабочее время <br> увеличивает тариф на 100 рублей</div>
+            </div>
+            <div class="delivery__item">
+               <img src="@img/icons/del_4.svg" alt="">
+               <div class="delivery__text">Доставка за пределы г. Красноярска <br> обсуждаются индивидуально</div>
+            </div>
+         </div>
+         <div class="delivery__zones">
+            <div class="delivery__text">Зоны покрытия доставки</div>
+            <div class="delivery__zones-list">
+               <div class="delivery__zone-item delivery__zone-item_frst">250 ₽</div>
+               <div class="delivery__zone-item delivery__zone-item_snd">300 ₽</div>
+               <div class="delivery__zone-item delivery__zone-item_trd">350 ₽</div>
+            </div>
+         </div>
+         <div class="delivery__map">
+            <div id="map-delivery"></div>
+            <!-- я там добавил рандомные зоны доставки, там ещё для разных зон надо цвета разные, пока не стал делать. 
+            если че позже сделаем если этого ещё нет -->
+            <script>
+               @@include('js/files/map-delivery.js', {})
+            </script>
+         </div>
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})

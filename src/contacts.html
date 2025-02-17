@@ -1,0 +1,94 @@
+@@include('html/_header.htm',{
+"title":"Контакты",
+"modClass":""
+})
+<main class="page">
+   <div class="page__container">
+      @@include('html/_breadcrumbs.htm',{})
+      <div class="page__title title-cormorant title-cormorant_brown">Контакты</div>
+      <div class="contacts">
+         <div class="contacts__top">
+            <div class="contacts__list">
+               <div class="contacts__item">
+                  <img src="@img/icons/cont-icon_phone.svg" alt="Телефон" class="contacts__icon">
+                  <div class="contacts__links">
+                     <a href="tel:+73912711141" class="contacts__link">+7 391 271 11 41</a>
+                     <a href="tel:+79069145771" class="contacts__link">+7 906 914 57 71</a>
+                  </div>
+               </div>
+
+               <div class="contacts__item">
+                  <img src="@img/icons/cont-icon_mail.svg" alt="E-mail" class="contacts__icon">
+                  <a href="mailto:info@greenmarket.ru" class="contacts__link">info@greenmarket.ru</a>
+               </div>
+
+               <div class="contacts__item">
+                  <img src="@img/icons/cont-icon_address.svg" alt="Адрес" class="contacts__icon">
+                  <span class="contacts__text">ул. 78 Добровольческой Бригады, 2</span>
+               </div>
+
+               <div class="contacts__item">
+                  <img src="@img/icons/cont-icon_time.svg" alt="График работы" class="contacts__icon">
+                  <span class="contacts__text">9–20 ежедневно</span>
+               </div>
+
+               <div class="contacts__item">
+                  <img src="@img/icons/cont-icon_tg.svg" alt="Telegram" class="contacts__icon">
+                  <a href="https://t.me/greenmarket_ru" class="contacts__link">@greenmarket_ru</a>
+               </div>
+
+               <div class="contacts__item">
+                  <img src="@img/icons/cont-icon_wa.svg" alt="WhatsApp" class="contacts__icon">
+                  <a href="https://wa.me/79069145771" class="contacts__link">WhatsApp</a>
+               </div>
+
+               <div class="contacts__item">
+                  <img src="@img/icons/cont-icon_vk.svg" alt="Instagram" class="contacts__icon">
+                  <a href="https://vk.com/zelenii24" class="contacts__link">zelenii24</a>
+               </div>
+
+               <div class="contacts__item">
+                  <img src="@img/icons/cont-icon_i.svg" alt="Веб-сайт" class="contacts__icon">
+                  <a href="https://greenmarket.ru" class="contacts__link">@greenmarket.ru</a>
+               </div>
+            </div>
+
+            <div class="contacts__file">
+               <img src="@img/icons/cont-icon_doc.svg" alt="Документ" class="contacts__icon">
+               <a href="" class="contacts__link">Коммерческое предложение <span class="contacts__file-type">DOC, 1.8 MB</span></a>
+            </div>
+         </div>
+      </div>
+      <div class="contacts-center">
+         <div class="contacts-center__map">
+            <div id="map"></div>
+            <script>
+               @@include('js/files/map.js', {})
+            </script>
+         </div>
+         <div class="contacts-center__requisites">
+            <div class="contacts-center__requisites-title">Реквизиты компании</div>
+            <div class="contacts-center__requisites-main">
+               <div class="contacts-center__requisites-text">Индивидуальный предприниматель <br> Мустафина Анастасия Раисовна</div>
+               <div class="contacts-center__requisites-text">ИНН 245606134010</div>
+               <div class="contacts-center__requisites-text">ОГРНИП 324246800045264</div>
+               <div class="contacts-center__requisites-text">ООО "Банк Точка"</div>
+               <div class="contacts-center__requisites-text">БИК: 044525104</div>
+               <div class="contacts-center__requisites-text">Корр. счёт: 30101810745374525104</div>
+               <div class="contacts-center__requisites-text">Расчётный счёт: 40802810120000292299</div>
+            </div>
+            <a href="" class="contacts-center__file">
+               <img src="@img/icons/Icon_doc.svg" alt="">
+               <span class="contacts-center__file-name">Реквизиты компании</span>
+               <span class="contacts-center__file-type">DOC, 1.8 МB</span>
+            </a>
+         </div>
+      </div>
+      <div class="contacts-form">
+         <div class="contacts-form__title title-cormorant">Обратная связь</div>
+         <div class="contacts-form__text">Задайте вопрос, направьте нам претензию или оставьте отзыв о работе сайта или магазина</div>
+         @@include('html/_page-form.htm',{})
+      </div>
+   </div>
+</main>
+@@include('html/_footer.htm',{})

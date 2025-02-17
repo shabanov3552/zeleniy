@@ -42,9 +42,9 @@ document.addEventListener("click", function (e) {
       txtarAutoHeight(e.target)
    }
    // спрятать/показать input в личкабе
-   if (e.target.closest('.personal-data__change')) {
+   if (e.target.closest('.js-edit')) {
       changeData(e.target)
-      e.preventDefault()
+      // e.preventDefault();
    }
    // смена текста кнопки в личкабе
    if (e.target.closest('.order__more-btn')) {
@@ -155,25 +155,26 @@ function txtarAutoHeight(target) {
 //#region спрятать/показать input в личкабе
 
 function changeData(target) {
-   let el = target.closest('.personal-data__row')
-   el.classList.add('_active');
-   let submitBtn = el.querySelector('.personal-data__btn')
-   submitBtn.addEventListener("click", function (e) {
-      el.classList.remove('_active');
-      el.classList.add('show-msg');
+   let fieldChunk = target.closest('.personal-info__field-chunk');
+   let confirmButton = fieldChunk.querySelector('.personal-info__confirm-btn');
+
+   fieldChunk.classList.add('edit-mode-active');
+   confirmButton.addEventListener("click", function (e) {
+      fieldChunk.classList.remove('edit-mode-active');
+      fieldChunk.classList.add('status-message-active');
       setTimeout(() => {
-         el.classList.remove('show-msg');
+         fieldChunk.classList.remove('status-message-active');
       }, 3000);
    });
-   document.addEventListener('keydown', function (e) {
-      if (e.code === 'Escape' || e.code === 'Enter' || e.code === 'NumpadEnter') {
-         el.classList.remove('_active');
-         el.classList.add('show-msg');
-         setTimeout(() => {
-            el.classList.remove('show-msg')
-         }, 3000);
-      }
-   });
+   // document.addEventListener('keydown', function (e) {
+   //    if (e.code === 'Escape' || e.code === 'Enter' || e.code === 'NumpadEnter') {
+   //       el.classList.remove('_active');
+   //       el.classList.add('show-msg');
+   //       setTimeout(() => {
+   //          el.classList.remove('show-msg')
+   //       }, 3000);
+   //    }
+   // });
 }
 
 //#endregion
