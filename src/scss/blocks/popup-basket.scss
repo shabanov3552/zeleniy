@@ -20,9 +20,12 @@
    // .basket__items
 
    &__items {
+
       // padding-right: func.rem(24);
-      height: 100%;
-      overflow: auto;
+      @media (min-width:bp.$lg) {
+         height: 100%;
+         overflow: auto;
+      }
 
       &::-webkit-scrollbar {
          display: none;

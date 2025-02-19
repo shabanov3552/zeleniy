@@ -54,7 +54,7 @@ class CustomTippy {
 
       let observer = new MutationObserver(records => {
          records[0].target.classList.forEach(item => {
-            item == '_active' ? this.tippyItem.setContent(`Удалить из ${this.activeText}`) : this.tippyItem.setContent(`Добавить в ${this.text}`);
+            item == '_active' ? this.tippyItem.setContent(`Убрать из ${this.activeText}`) : this.tippyItem.setContent(`Добавить в ${this.text}`);
          });
       });
 
@@ -112,24 +112,15 @@ class CustomTippy {
    }
 }
 
-const favorButtons = document.querySelectorAll('.product-card__btn-favorites');
+const favorButtons = document.querySelectorAll(`
+.product-card__favorite-button, 
+.prod-mini-slider__favorite-button, 
+.basket-item__favorite,
+.product-detail__favorite-button`);
+
 favorButtons.forEach(element => {
    let tip = new CustomTippy(element, 'избранное', 'избранного');
    tip.initTippy();
 });
-
-const favorBasketButtons = document.querySelectorAll('.basket-card__favor');
-favorBasketButtons.forEach(element => {
-   let tip = new CustomTippy(element, 'избранное', 'избранного');
-   tip.initTippy();
-});
-
-if (document.querySelector('.product')) {
-   let productFavorTippy = new CustomTippy(document.querySelector('.product__btn-favorites'), 'избранное', 'избранного');
-   productFavorTippy.initTippy();
-
-   // let productCompareTippy = new CustomTippy(document.querySelector('.product__btn-compare'), 'сравнение', 'сравнения');
-   // productCompareTippy.initTippy();
-}
 
 //#endregion

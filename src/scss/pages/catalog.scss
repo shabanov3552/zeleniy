@@ -88,6 +88,7 @@
       align-items: center;
       font-size: 17px;
       color: #000;
+      flex-shrink: 0;
 
       @media (min-width:bp.$lg) {
          display: none;
@@ -442,6 +443,7 @@
    grid-template-columns: auto 1fr auto;
    align-items: center;
    gap: 20px;
+   width: 100%;
 
    @media (max-width:bp.$lg) {
       display: block;

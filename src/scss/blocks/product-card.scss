@@ -264,10 +264,24 @@
             fill: #fff;
          }
 
+         &::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 30px;
+            display: block;
+            background: #030303;
+            transform: rotate(315deg);
+            top: -4px;
+            left: 10px;
+            opacity: 0;
+         }
+
          @media (any-hover: hover) {
             &:hover {
-               svg use {
-                  fill: none;
+               &::before {
+                  content: '';
+                  opacity: 1;
                }
             }
          }

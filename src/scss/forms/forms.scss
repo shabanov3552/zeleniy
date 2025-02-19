@@ -21,7 +21,7 @@ input::-webkit-passman-key {
 }
 
 textarea {
-	min-height: 87px;
+	min-height: 40px;
 	resize: vertical;
 
 	&::-webkit-scrollbar {
@@ -98,7 +98,7 @@ textarea {
 		outline: none;
 		background: transparent;
 		border-bottom: 1px solid #7f7e7a;
-		padding: func.rem(5) func.rem(32) func.rem(5) func.rem(0);
+		padding: func.rem(5) func.rem(36) func.rem(5) func.rem(0);
 		width: 100%;
 		border-radius: 0;
 

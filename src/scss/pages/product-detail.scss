@@ -438,6 +438,7 @@
    // .product-detail-slider__slide
 
    &__slide {
+      cursor: pointer;
 
       .product-detail-slider__thumbs & {
          border-radius: 5px;

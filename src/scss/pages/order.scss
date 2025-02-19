@@ -206,6 +206,7 @@
          padding: 0;
          margin: 0;
          margin-bottom: func.rem(20);
+         padding-right: func.rem(30);
       }
    }
 
@@ -218,9 +219,8 @@
       }
 
       @media (max-width:bp.$lg) {
-         margin-right: func.rem(20);
+         // margin-right: func.rem(20);
          min-width: 320px;
-
       }
 
       @media (max-width:func.em(600)) {
@@ -799,9 +799,11 @@
    max-width: 1000px;
    margin: 0 auto;
    margin-bottom: func.rem(140);
+   margin-top: func.rem(70);
 
    @media (max-width:bp.$md) {
       margin-bottom: func.rem(40);
+      margin-top: func.rem(30);
    }
 
    // .order-success__logo

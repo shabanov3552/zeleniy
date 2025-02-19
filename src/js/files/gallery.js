@@ -20,6 +20,7 @@ import lightGallery from 'lightgallery';
 
 // Базовые стили
 import '@scss/libs/gallery/lightgallery.scss';
+// import '../../scss/libs/gallery/css/lightgallery.css';
 // Стили дополнений
 // import '@scss/libs/gallery/lg-thumbnail.scss';
 // import '@scss/libs/gallery/lg-video.scss';

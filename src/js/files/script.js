@@ -35,23 +35,14 @@ document.addEventListener("click", function (e) {
       input.parentElement.classList.remove('_form-focus');
       e.target.closest('.form__clear-svg').classList.remove('_active');
       // Inputmask.remove(input);
-      // input.style.height = `auto`;
-   }
-   // автовысота для textarea
-   if (e.target.closest('textarea')) {
-      txtarAutoHeight(e.target)
+      input.style.height = ``;
    }
    // спрятать/показать input в личкабе
    if (e.target.closest('.js-edit')) {
       changeData(e.target)
       // e.preventDefault();
    }
-   // смена текста кнопки в личкабе
-   if (e.target.closest('.order__more-btn')) {
-      let target = e.target.closest('.order__more-btn')
-      target.classList.contains('_spoller-active') ? target.innerHTML = 'Свернуть детали заказа' : target.innerHTML = 'Показать детали заказа';
-      e.preventDefault()
-   }
+
 });
 
 //#endregion
@@ -123,35 +114,6 @@ function copyUrl() {
 
 //#endregion
 
-//#region автовысота для textarea
-
-function txtarAutoHeight(target) {
-   const el = target;
-   if (el.closest('textarea')) {
-
-      let origHeight
-      if (el.dataset.height) {
-         origHeight = el.dataset.height
-      } else {
-         origHeight = el.scrollHeight
-         el.dataset.height = origHeight
-      }
-      origHeight = Number(origHeight)
-      el.style.height = el.setAttribute('style', 'height: ' + (origHeight + 1) + 'px');
-      el.addEventListener('input', e => {
-         if (el.scrollHeight > origHeight) {
-            el.style.height = 'auto';
-            el.style.height = (el.scrollHeight) + 10 + 'px';
-         } else {
-            el.style.height = 'auto';
-            el.style.height = origHeight + 'px';
-         }
-      });
-   }
-}
-
-//#endregion
-
 //#region спрятать/показать input в личкабе
 
 function changeData(target) {
@@ -197,7 +159,7 @@ window.addEventListener("load", function (e) {
          pickUpPointButtons.forEach(btn => {
             btn.setAttribute('class', '')
             btn.style = 'display: flex; justify-content:center; align-items: center; text-align: center;';
-            btn.classList.add('radio-buttons__btn', 'btn', 'btn_grey');
+            btn.classList.add('radio-buttons__btn', 'btn', 'green-button');
          });
       }
       styleButtonChange();
@@ -263,155 +225,27 @@ function sidebarCatalogActions(e) {
 
 //#region Кнопка вверх и лого
 
-if (document.querySelector('.broadcast')) {
+// if (document.querySelector('.broadcast')) {
 
-   let buttonToTop = function (e) {
-      let btnTop = document.querySelector('.broadcast');
-      let scr_val = window.pageYOffset + document.documentElement.clientHeight;
-      let scrollHeight = Math.max(
-         document.body.scrollHeight, document.documentElement.scrollHeight,
-         document.body.offsetHeight, document.documentElement.offsetHeight,
-         document.body.clientHeight, document.documentElement.clientHeight
-      );
-      scr_val >= (scrollHeight - 50) ? btnTop.classList.add('_active') : btnTop.classList.remove('_active');
-   };
-   window.addEventListener('scroll', buttonToTop);
-}
+//    let buttonToTop = function (e) {
+//       let btnTop = document.querySelector('.broadcast');
+//       let scr_val = window.pageYOffset + document.documentElement.clientHeight;
+//       let scrollHeight = Math.max(
+//          document.body.scrollHeight, document.documentElement.scrollHeight,
+//          document.body.offsetHeight, document.documentElement.offsetHeight,
+//          document.body.clientHeight, document.documentElement.clientHeight
+//       );
+//       scr_val >= (scrollHeight - 50) ? btnTop.classList.add('_active') : btnTop.classList.remove('_active');
+//    };
+//    window.addEventListener('scroll', buttonToTop);
+// }
 //#endregion
 
-//#region Плавающая линия для табов
-
-document.querySelectorAll(".float-line").forEach(e => {
-   floatLine(e)
-});
-
-function floatLine(node) {
-   if (!node) return
-
-   node.addEventListener("mouseover", (e) => {
-      if (e.target.classList.contains("float-line__item")) {
-         if (node.closest('.float-line__horizontal')) {
-            node.style.setProperty(
-               "--underline-offset-y",
-               `${e.target.offsetTop}px`
-            );
-            node.style.setProperty(
-               "--underline-height",
-               `${e.target.offsetHeight}px`
-            );
-         } else {
-            node.style.setProperty(
-               "--underline-width",
-               `${e.target.offsetWidth}px`
-            );
-            node.style.setProperty(
-               "--underline-offset-x",
-               `${e.target.offsetLeft}px`
-            );
-         }
-      }
-   });
-   node.addEventListener("mouseleave", () => {
-      if (node.closest('.float-line__horizontal')) {
-         node.style.setProperty("--underline-height", "0")
-      } else {
-         node.style.setProperty("--underline-width", "0")
-      }
-   });
-}
-
-//#endregion
-
-//#region Переключатель отображения плиток в каталоге
-
-const layout = document.querySelector('.js-layout');
-if (layout) {
 
 
 
-   if (localStorage.getItem('layout')) {
-      document.querySelector('.main-catalog__cards, .favorites__cards').classList.add('row');
-      layout.querySelector(".js-layout__row").classList.add('_active');
-      layout.querySelector(".js-layout__column").classList.remove('_active');
-   }
 
 
-   layout.addEventListener("click", function (e) {
-      let target = e.target;
-      let cards = document.querySelector('.main-catalog__cards, .favorites__cards')
-      let rowBtn = layout.querySelector(".js-layout__row")
-      let colBtn = layout.querySelector(".js-layout__column")
-
-
-
-      if (target.closest('.js-layout__column')) {
-         cards.classList.remove('row')
-         localStorage.removeItem('layout')
-      } else if (target.closest('.js-layout__row')) {
-         cards.classList.add('row')
-         localStorage.setItem("layout", 'row')
-      }
-      if (target.closest('.js-layout__row')) {
-         colBtn.classList.remove('_active')
-         rowBtn.classList.add('_active')
-      } else {
-         colBtn.classList.add('_active')
-         rowBtn.classList.remove('_active')
-      }
-   });
-}
-
-//#endregion
-
-//#region высота строк в сравнении 
-
-window.addEventListener("load", function () {
-   const dataName = Array.from(document.querySelectorAll('[data-name]'));
-   let names = [];
-   dataName.forEach(el => {
-      if (!names.includes(el.dataset.name)) {
-         names.push(el.dataset.name)
-      }
-   });
-   for (const name of names) {
-      setHeight(name)
-   }
-   function setHeight(name) {
-      const nodeName = document.querySelector(`[data-main=${name}]`);
-      const node = document.querySelectorAll(`[data-name=${name}]`);
-      let heights = []
-      heights.push(nodeName.scrollHeight);
-      node.forEach(el => {
-         heights.push(el.scrollHeight);
-      });
-      let maxHei = Math.max(...heights);
-      node.forEach(element => {
-         element.style.height = maxHei + 'px';
-      });
-      nodeName ? nodeName.style.height = maxHei + 'px' : null;
-   }
-   let btnChek = document.querySelector(".radio-inline input[type=\"radio\"]:checked");
-   if (btnChek) {
-      btnChek.closest('.radio-inline').classList.add('checked');
-   }
-});
-
-//#endregion
-
-//#region выбор всех чекбоксов
-
-// js-allCheck
-
-document.addEventListener('change', e => {
-   let target = e.target;
-   if (target.classList.contains('js-allCheck')) {
-      let table = target.closest('.merchant-cabinet__table')
-      let checkboxes = table.querySelectorAll('.merchant-cabinet__checkbox input');
-      target.checked ? checkboxes.forEach(e => e.checked = true) : checkboxes.forEach(e => e.checked = false);
-   }
-});
-
-//#endregion
 
 //#region Функционал дропдаунов открыть\закрыть
 
