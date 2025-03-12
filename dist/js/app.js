@@ -6184,23 +6184,25 @@
         };
         __publicField(_Calendar, "memoizedElements", new Map);
         let Calendar = _Calendar;
-        const calendar = new Calendar("#calendar", {
-            inputMode: true,
-            positionToInput: "auto",
-            locale: "ru-RU",
-            selectionTimeMode: 24,
-            selectedTheme: "light",
-            timeMaxHour: 20,
-            timeMinHour: 9,
-            timeStepMinute: 5,
-            onChangeToInput(self) {
-                if (!self.context.inputElement) return;
-                if (self.context.selectedTime && self.context.selectedDates[0] === void 0) self.context.inputElement.value = `Выберете день ${self.context.selectedTime}`;
-                if (self.context.selectedDates[0]) self.context.inputElement.value = `${self.context.selectedDates[0]} ${self.context.selectedTime}`;
-            }
-        });
-        calendar.init();
-        modules_flsModules.calendar = calendar;
+        if (document.querySelector("#calendar")) {
+            const calendar = new Calendar("#calendar", {
+                inputMode: true,
+                positionToInput: "auto",
+                locale: "ru-RU",
+                selectionTimeMode: 24,
+                selectedTheme: "light",
+                timeMaxHour: 20,
+                timeMinHour: 9,
+                timeStepMinute: 5,
+                onChangeToInput(self) {
+                    if (!self.context.inputElement) return;
+                    if (self.context.selectedTime && self.context.selectedDates[0] === void 0) self.context.inputElement.value = `Выберете день ${self.context.selectedTime}`;
+                    if (self.context.selectedDates[0]) self.context.inputElement.value = `${self.context.selectedDates[0]} ${self.context.selectedTime}`;
+                }
+            });
+            calendar.init();
+            modules_flsModules.calendar = calendar;
+        }
         __webpack_require__(958);
         const inputMasks = document.querySelectorAll("input");
         if (inputMasks.length) modules_flsModules.inputmask = Inputmask().mask(inputMasks);
