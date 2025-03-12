@@ -1,1 +1,2 @@
-export const flsModules = {}
+export const flsModules = {};
+window.flsModules = flsModules

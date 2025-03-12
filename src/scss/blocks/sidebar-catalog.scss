@@ -147,25 +147,63 @@
       }
    }
 
-   // .sidebar-catalog__menu
+   // .sidebar-catalog__menu-inner
 
-   &__menu {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
+   &__menu-inner {
       overflow: auto;
-      gap: 3px;
+      height: 100%;
 
       &::-webkit-scrollbar {
          display: none;
       }
 
       @media (max-width:bp.$md) {
-         height: calc(100vh - 83px);
-         padding: func.rem(83) 0;
+         height: calc(100vh - 85px);
+         padding-bottom: func.rem(83);
+      }
+   }
+
+   // .sidebar-catalog__menu
+
+   &__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      @media (max-width:bp.$md) {
+         padding-top: func.rem(83);
+         padding-bottom: func.rem(17);
       }
 
+   }
 
+   // .sidebar-catalog__phones-block
+
+   &__phones-block {
+      @media (min-width:bp.$xl) {
+         display: none;
+      }
+   }
+
+   // .sidebar-catalog__phone
+
+   &__phone {
+      display: block;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 179%;
+      color: #0c0c0c;
+      padding: func.rem(5) func.rem(29) func.rem(5) func.rem(61);
+
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+
+      @media (max-width:bp.$md) {
+         padding: func.rem(5) func.rem(20);
+      }
    }
 
    // .sidebar-catalog__link

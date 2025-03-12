@@ -703,8 +703,23 @@
                background-color: #295e21;
                border: solid 4px #efede4;
             }
+
+            // .radio-buttons__date-time-picker
+
+            .radio-buttons__date-time-picker {
+               display: block;
+            }
          }
+
       }
+   }
+
+   // .radio-buttons__date-time-picker
+
+   &__date-time-picker {
+      display: none;
+      padding-right: 0;
+      min-height: 30px;
    }
 
    // .radio-buttons__inner

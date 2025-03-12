@@ -5,22 +5,32 @@
 import { flsModules } from "../modules.js";
 
 // Подключение модуля
-import datepicker from 'js-datepicker';
+import { Calendar } from "vanilla-calendar-pro";
+import 'vanilla-calendar-pro/styles/index.css';
+// import 'vanilla-calendar-pro/styles/layout.css'; // Только скелет
+// import 'vanilla-calendar-pro/styles/themes/light.css'; // Светлая тема
 
-if (document.querySelector('[data-datepicker]')) {
-	const picker = datepicker('[data-datepicker]', {
-		customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
-		customMonths: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
-		overlayButton: 'Применить',
-		overlayPlaceholder: 'Год (4 цифры)',
-		startDay: 1,
-		formatter: (input, date, instance) => {
-			const value = date.toLocaleDateString()
-			input.value = value
-		},
-		onSelect: function (input, instance, date) {
+const calendar = new Calendar('#calendar', {
+	inputMode: true,
+	positionToInput: 'auto',
+	locale: 'ru-RU',
+	selectionTimeMode: 24,
+	selectedTheme: 'light',
+	timeMaxHour: 20,
+	timeMinHour: 9,
+	timeStepMinute: 5,
+	onChangeToInput(self) {
+		if (!self.context.inputElement) return;
 
+		if (self.context.selectedTime && self.context.selectedDates[0] === undefined) {
+			self.context.inputElement.value = `Выберете день ${self.context.selectedTime}`;
 		}
-	});
-	flsModules.datepicker = picker;
-}
+
+		if (self.context.selectedDates[0]) {
+			self.context.inputElement.value = `${self.context.selectedDates[0]} ${self.context.selectedTime}`;
+		}
+	},
+});
+
+calendar.init();
+flsModules.calendar = calendar

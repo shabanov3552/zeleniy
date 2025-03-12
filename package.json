@@ -93,6 +93,7 @@
 		"isotope-layout": "^3.0.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"simplebar": "latest"
+		"simplebar": "latest",
+		"vanilla-calendar-pro": "^3.0.3"
 	}
 }

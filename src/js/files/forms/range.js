@@ -8,72 +8,69 @@ import * as noUiSlider from 'nouislider';
 // import 'nouislider/dist/nouislider.css';
 
 export function rangeInit(rangeSlider) {
-	if (rangeSlider) {
-		let priceCnt = rangeSlider.closest('.price')
-		let textFrom = parseInt(rangeSlider.getAttribute('data-from'));
-		let textTo = parseInt(rangeSlider.getAttribute('data-to'));
-		const input0 = priceCnt.querySelector('.js_input-from');
-		const input1 = priceCnt.querySelector('.js_input-to');
-		const inputs = [input0, input1];
+	if (!rangeSlider) return;
 
-		let start = [textFrom, textTo]
+	let priceCnt = rangeSlider.closest('.price');
+	if (!priceCnt) {
+		console.error('Не найден родитель .price для слайдера', rangeSlider);
+		return;
+	}
 
-		if (input0.value.length) {
-			var current = parseFloat(input0.value.trim())
-			if (current > textFrom) {
-				start[0] = current
-			}
-		}
+	let dataFrom = parseInt(rangeSlider.getAttribute('data-from')) || 1;
+	let dataTo = parseInt(rangeSlider.getAttribute('data-to')) || 100;
 
-		if (input1.value.length) {
-			var current = parseFloat(input1.value.trim())
-			if (current < textTo) {
-				start[1] = current
-			}
-		}
+	const inputFrom = priceCnt.querySelector('.js_input-from');
+	const inputTo = priceCnt.querySelector('.js_input-to');
 
-		noUiSlider.create(rangeSlider, {
-			start,
-			connect: true,
-			range: {
-				'min': [textFrom],
-				'max': [textTo]
+	if (!inputFrom || !inputTo) {
+		console.error('Не найдены инпуты для слайдера', rangeSlider);
+		return;
+	}
+
+	const inputs = [inputFrom, inputTo];
+	const changeEvent = new Event('change', { bubbles: true });
+
+	function updateValue(values, handle) {
+		inputs[handle].value = Math.round(values[handle]);
+	}
+
+	function setSlider(value, index) {
+		let arr = [null, null];
+		arr[index] = parseInt(value);
+		slider.set(arr);
+	}
+
+	inputs.forEach((input, index) => {
+		input.placeholder = index == 0 ? dataFrom : dataTo;
+
+		input.addEventListener('change', (e) => {
+			if (e.isTrusted) {
+				setSlider(e.target.value, index);
 			}
 		})
+	})
 
+	const slider = noUiSlider.create(rangeSlider, {
+		start: [dataFrom, dataTo],
+		connect: true,
+		step: 1,
+		range: {
+			'min': [dataFrom],
+			'max': [dataTo]
+		}
+	});
 
-		rangeSlider.noUiSlider.on('update', function (values, handle) {
-			inputs[handle].value = Math.round(values[handle]);
-		});
-
-		var skipRecursiveBackward = false
-
-		rangeSlider.noUiSlider.on('end', function (values, handle) {
-			if (input0 && input1) {
-				skipRecursiveBackward = true
-				inputs[handle].dispatchEvent((new Event('change')))
-				inputs[handle].dispatchEvent((new Event('keyup')))
-			}
-		});
-
-		const setRangeSlider = (i, value) => {
-			let arr = [null, null];
-			arr[i] = value;
-
-
-			rangeSlider.noUiSlider.set(arr);
-		};
-
-		inputs.forEach((el, index) => {
-			el.addEventListener('change', (e) => {
-				if (skipRecursiveBackward) {
-					skipRecursiveBackward = false
-					return
-				}
-				setRangeSlider(index, e.currentTarget.value);
-			});
-		});
+	if (inputFrom.value.length || inputTo.value.length) {
+		slider.set([
+			parseInt(inputFrom.value),
+			parseInt(inputTo.value)])
 	}
+
+	slider.on('slide', updateValue);
+	slider.on('end', (v, handle) => {
+		inputs[handle].dispatchEvent(changeEvent);
+	});
+
 }
 
 

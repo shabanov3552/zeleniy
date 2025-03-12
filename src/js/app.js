@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window['FLS'] = true;
+window['FLS'] = false;
 
 // Подключение основного файла стилей
 import "../scss/style.scss";
@@ -118,7 +118,7 @@ flsForms.formFieldsInit({
 import './libs/select.js'
 
 /* Модуль работы с календарем */
-// import './files/forms/datepicker.js'
+import './files/forms/datepicker.js'
 
 /* (В работе) Модуль работы с масками.*/
 /*
