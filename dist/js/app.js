@@ -3810,6 +3810,13 @@
                 return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
             }
         };
+        function addLoadedClass() {
+            if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
+                setTimeout((function() {
+                    document.documentElement.classList.add("loaded");
+                }), 0);
+            }));
+        }
         function functions_getHash() {
             if (location.hash) return location.hash.replace("#", "");
         }
@@ -6196,8 +6203,10 @@
                 timeStepMinute: 5,
                 onChangeToInput(self) {
                     if (!self.context.inputElement) return;
+                    const inputDelTime = document.querySelector("#DeliveryTime");
                     if (self.context.selectedTime && self.context.selectedDates[0] === void 0) self.context.inputElement.value = `Выберете день ${self.context.selectedTime}`;
                     if (self.context.selectedDates[0]) self.context.inputElement.value = `${self.context.selectedDates[0]} ${self.context.selectedTime}`;
+                    if (inputDelTime !== null) inputDelTime.value = `${self.context.selectedDates[0] || "Выберете день"} ${self.context.selectedTime}`;
                 }
             });
             calendar.init();
@@ -14439,6 +14448,7 @@
                 }
             });
         }
+        modules_flsModules.initSliders = initSliders;
         window.addEventListener("load", (function(e) {
             initSliders();
         }));
@@ -17785,6 +17795,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }
         window["FLS"] = false;
         isWebp();
+        addLoadedClass();
         spollers();
         tabs();
         showMore();

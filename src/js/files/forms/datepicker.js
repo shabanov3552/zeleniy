@@ -22,12 +22,18 @@ if (document.querySelector('#calendar')) {
 		onChangeToInput(self) {
 			if (!self.context.inputElement) return;
 
+			const inputDelTime = document.querySelector('#DeliveryTime');
+
 			if (self.context.selectedTime && self.context.selectedDates[0] === undefined) {
 				self.context.inputElement.value = `Выберете день ${self.context.selectedTime}`;
 			}
 
 			if (self.context.selectedDates[0]) {
 				self.context.inputElement.value = `${self.context.selectedDates[0]} ${self.context.selectedTime}`;
+			}
+
+			if (inputDelTime !== null) {
+				inputDelTime.value = `${self.context.selectedDates[0] || 'Выберете день'} ${self.context.selectedTime}`;
 			}
 		},
 	});

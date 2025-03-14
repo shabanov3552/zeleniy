@@ -3,7 +3,7 @@
 Документация слайдера: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-
+import { flsModules } from "./modules.js";
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
@@ -646,7 +646,7 @@ function initSlidersScroll() {
 		}
 	}
 }
-
+flsModules.initSliders = initSliders;
 window.addEventListener("load", function (e) {
 	// Запуск инициализации слайдеров
 	initSliders();
