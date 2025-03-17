@@ -4878,6 +4878,50 @@ body::after {
 .loyalty-page__rul-descr p:not(:last-child) {
   margin-bottom: 1.875rem
 }
+.payment {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6.25rem
+}
+.payment__row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 500px 1fr;
+  grid-template-columns: 500px 1fr;
+  gap: 140px;
+  margin-bottom: 3.75rem
+}
+.payment__title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 36px;
+  color: #295e21
+}
+.payment__text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 143%;
+  color: #000
+}
+.payment__text p {
+  margin-bottom: 1.875rem
+}
+.payment__text ul {
+  padding-left: 1.5625rem;
+  margin-bottom: 4.375rem
+}
+.payment__text ul li {
+  list-style: disc
+}
+.payment__text h2,
+.payment__text h3,
+.payment__text h4,
+.payment__text h5,
+.payment__text h6 {
+  font-weight: 500;
+  margin-bottom: .9375rem
+}
 /*! name: vanilla-calendar-pro v3.0.3 | url: https://github.com/uvarov-frontend/vanilla-calendar-pro */
 [data-vc=calendar] {
   border-radius: .75rem;
@@ -7169,6 +7213,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     grid-template-columns: 490px 1fr;
     gap: 50px
   }
+  .payment__row {
+    display: block
+  }
+  .payment__title {
+    margin-bottom: 1.875rem
+  }
+  .payment__text p {
+    margin-bottom: 1.25rem
+  }
 }
 @media (max-width:68.75em) {
   .mp-fb__slide {
@@ -7517,6 +7570,23 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     height: 425px;
     -ms-grid-column-align: center;
     justify-self: center
+  }
+  .payment {
+    margin-bottom: 1.875rem
+  }
+  .payment__row {
+    margin-bottom: 1.875rem
+  }
+  .payment__title {
+    font-size: 26px;
+    margin-bottom: .9375rem
+  }
+  .payment__text {
+    font-size: 17px;
+    line-height: 124%
+  }
+  .payment__text ul {
+    margin-bottom: 1.25rem
   }
 }
 @media (max-width:47.99875em) {
