@@ -9962,9 +9962,8 @@
             initTippy() {
                 this.tippyItem.setContent(`Добавить в ${this.text}`);
                 let observer = new MutationObserver((records => {
-                    records[0].target.classList.forEach((item => {
-                        item == "_active" ? this.tippyItem.setContent(`Убрать из ${this.activeText}`) : this.tippyItem.setContent(`Добавить в ${this.text}`);
-                    }));
+                    let classes = Array.from(records[0].target.classList).includes("_active");
+                    classes ? this.tippyItem.setContent(`Убрать из ${this.activeText}`) : this.tippyItem.setContent(`Добавить в ${this.text}`);
                 }));
                 observer.observe(this.node, {
                     subtree: true,
