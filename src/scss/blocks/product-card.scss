@@ -189,6 +189,7 @@
       font-size: 21px;
       line-height: 119%;
       color: var(--green-text-color);
+      overflow-wrap: anywhere;
 
       @media (max-width:bp.$md) {
          font-size: 16px;

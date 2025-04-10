@@ -300,6 +300,12 @@ body::after {
 		.form__line+.form__line {
 			margin-top: func.rem(40);
 		}
+
+		&:has(.parsley-errors-list) {
+			#timer {
+				margin-top: func.rem(25);
+			}
+		}
 	}
 
 	// .popup__icon

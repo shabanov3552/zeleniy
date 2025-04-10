@@ -320,6 +320,12 @@
          .order__line {
             width: 100%;
 
+            @media (min-width:bp.$md) {
+               &:first-child {
+                  margin: 0;
+               }
+            }
+
             textarea {
                resize: vertical;
 
@@ -330,9 +336,11 @@
          }
 
          .order__col {
-            &:last-child {
-               display: flex;
-               gap: 13px;
+            display: flex;
+            gap: 80px;
+
+            @media (max-width:bp.$md) {
+               display: block;
             }
          }
       }
@@ -408,7 +416,6 @@
 
       @media (max-width:bp.$md) {
          font-size: 19px;
-         margin-bottom: func.rem(5);
       }
    }
 
@@ -905,6 +912,10 @@
 
       @media (max-width:bp.$md) {
          height: 56px;
+      }
+
+      @media (max-width:bp.$xxs) {
+         width: 100%;
       }
    }
 }

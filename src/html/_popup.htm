@@ -430,11 +430,15 @@
 						<form action="" class="form">
 							<div class="form__line">
 								<label for="" class="form__label">Пароль</label>
-								<input id="" type="password" name="" class="form__input">
+								<input id="" type="password" name="" class="form__input" required>
+								<ul class="parsley-errors-list filled">
+									<li class="parsley-required">Обязательное поле</li>
+								</ul>
 								<svg class="form__clear-svg">
 									<use xlink:href="img/icons/icons.svg#input_clear"></use>
 								</svg>
 							</div>
+							<div id="timer">Время до повторной отправки кода 49</div>
 							<button type="submit" class="form__button">Авторизоваться</button>
 							<div class="form__consent">Я даю <a href="" class="form__consent-link">согласие на обработку персональных данных</a></div>
 							<div class="popup-links popup-links_col">

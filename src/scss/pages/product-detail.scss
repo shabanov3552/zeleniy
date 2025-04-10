@@ -297,6 +297,12 @@
       display: grid;
       grid-template-columns: 130px 1fr;
       gap: 27px;
+      overflow-wrap: anywhere;
+
+      @media (max-width:bp.$xxs) {
+         grid-template-columns: 1fr;
+         gap: 5px;
+      }
    }
 
    // .product-detail__spec-name

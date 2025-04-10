@@ -57,11 +57,14 @@
       transition: all 0.3s ease 0s;
    }
 
-   @media (any-hover: hover) {
-      &:hover {
-         &::before {
-            opacity: 1;
-            visibility: visible;
+   @media (min-width:bp.$md) {
+
+      @media (any-hover: hover) {
+         &:hover {
+            &::before {
+               opacity: 1;
+               visibility: visible;
+            }
          }
       }
    }

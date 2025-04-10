@@ -342,6 +342,8 @@
 	// .nav-panel__item
 
 	&__item {
+		position: relative;
+
 		@media (min-width:bp.$lg) {
 			&:first-child {
 				display: none;
@@ -350,6 +352,10 @@
 			span {
 				display: none;
 			}
+
+			.nav-panel__counter {
+				display: block;
+			}
 		}
 
 		@media (max-width:bp.$lg) {
@@ -357,6 +363,25 @@
 			justify-items: center;
 			gap: 7px;
 			font-size: 13px;
+		}
+	}
+
+	// .nav-panel__counter
+
+	&__counter {
+		position: absolute;
+		bottom: 100%;
+		left: 100%;
+		color: #fff;
+		background: rgb(106 198 95);
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: 600;
+		padding: func.rem(2) func.rem(5);
+
+		@media (max-width:bp.$lg) {
+			bottom: 90%;
+			left: 70%;
 		}
 	}
 }

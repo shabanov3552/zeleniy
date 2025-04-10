@@ -413,6 +413,7 @@
 		font-weight: 500;
 		font-size: 21px;
 		line-height: 143%;
+		overflow-wrap: anywhere;
 
 		@media (max-width:bp.$md) {
 			font-size: 17px;
@@ -797,27 +798,27 @@
 			font-size: 18px;
 		}
 
-		// .order-item__status_paid
+		// .order__status_paid
 
-		&_paid {
+		&.order__status_paid {
 			color: #46bb96;
 		}
 
-		// .order-item__status_pending
+		// .order__status_pending
 
-		&_pending {
+		&.order__status_pending {
 			color: #de951a;
 		}
 
-		// .order-item__status_completed
+		// .order__status_completed
 
-		&_completed {
+		&.order__status_completed {
 			color: #64a333;
 		}
 
-		// .order-item__status_canceled
+		// .order__status_canceled
 
-		&_canceled {
+		&.order__status_canceled {
 			color: #c13e59;
 		}
 	}
@@ -880,7 +881,11 @@
 		}
 
 		@media (max-width:bp.$md) {
-			gzp: 28px;
+			gap: 28px;
+		}
+
+		@media (max-width:bp.$xxs) {
+			gap: 15px;
 		}
 	}
 
@@ -906,6 +911,7 @@
 		font-size: 21px;
 		line-height: 119%;
 		color: #295e21;
+		overflow-wrap: anywhere;
 
 		@media (max-width:bp.$md) {
 			font-size: 17px;
@@ -1015,6 +1021,11 @@
 			grid-template-columns: 130px 1fr;
 			gap: 27px;
 			font-size: 17px;
+		}
+
+		@media (max-width:bp.$xxs) {
+			grid-template-columns: 1fr;
+			gap: 0px;
 		}
 	}
 

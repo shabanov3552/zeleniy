@@ -376,6 +376,10 @@
       @media (max-width:bp.$md) {
          margin-bottom: func.rem(35);
       }
+
+      @media (max-width:bp.$xxs) {
+         width: 100%;
+      }
    }
 
    // .loyalty-page__nav-title
@@ -386,6 +390,10 @@
       font-size: 21px;
       line-height: 143%;
       padding: func.rem(13) func.rem(19) func.rem(11) func.rem(17);
+
+      @media (max-width:bp.$xxs) {
+         font-size: 18px;
+      }
 
       &._tab-active {
          background: #fdfbf5;
