@@ -51,7 +51,7 @@
 	// .header__container
 
 	&__container {
-		padding: func.rem(0) func.rem(27);
+		padding: func.rem(0) func.rem(25);
 		border-bottom: 1px solid #d8d8d8;
 		padding-top: func.rem(22);
 		padding-bottom: func.rem(38);
@@ -60,6 +60,7 @@
 		grid-template-columns: repeat(4, auto) 1fr repeat(2, auto);
 
 		@media (max-width:bp.$xl) {
+			padding: func.rem(0) func.rem(25);
 			padding-top: func.rem(13);
 			padding-bottom: func.rem(31);
 		}
@@ -327,7 +328,8 @@
 
 .nav-panel {
 	display: flex;
-	gap: 30px;
+	gap: 28px;
+	align-items: center;
 
 	@media (max-width:bp.$lg) {
 		justify-content: space-between;

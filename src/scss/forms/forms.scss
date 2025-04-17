@@ -60,6 +60,10 @@ textarea {
 	&__line {
 		position: relative;
 
+		&+.form__text {
+			margin-top: func.rem(10);
+		}
+
 		@media (min-width:bp.$md) {
 			&:last-child {
 				grid-column: -1/1;

@@ -35,6 +35,11 @@ const paths = {
 const config = {
 	mode: "development",
 	devtool: 'inline-source-map',
+	stats: {
+		all: undefined,
+		errors: true,
+		warnings: false
+	},
 	optimization: {
 		minimize: false
 	},
@@ -59,6 +64,12 @@ const config = {
 		//devMiddleware: {
 		//	writeToDisk: true,
 		//},
+		client: {
+			overlay: {
+				errors: true,
+				warnings: false
+			}
+		},
 		watchFiles: [
 			`${paths.src}/**/*.html`,
 			`${paths.src}/**/*.pug`,

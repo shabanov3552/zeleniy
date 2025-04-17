@@ -793,6 +793,7 @@
 
 	&__status {
 		font-size: 21px;
+		display: none;
 
 		@media (max-width:bp.$md) {
 			font-size: 18px;

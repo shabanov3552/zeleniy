@@ -221,6 +221,10 @@
       padding: func.rem(18);
       width: 100%;
 
+      &[data-popup="#basket"] {
+         background: #d9e8d7;
+      }
+
       @media (max-width:bp.$lg) {
          font-size: 16px;
          padding: func.rem(13);
