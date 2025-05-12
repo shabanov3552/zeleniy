@@ -1871,37 +1871,53 @@ body::after {
   -ms-flex-pack: center;
   justify-content: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  gap: 0 30px
 }
 .breadcrumbs__li {
-  margin: 0 .9375rem .3125rem 0;
+  margin: 0 0 .3125rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  white-space: nowrap
+  text-align: center
+}
+.breadcrumbs__li:not(:last-child) {
+  position: relative
 }
 .breadcrumbs__li:not(:last-child)::after {
   content: "•";
-  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: -18px;
+  width: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: var(--grey-text-color);
   font-size: 21px;
-  line-height: 119%;
-  margin-left: .9375rem
+  line-height: 119%
 }
 .breadcrumbs__link {
   color: var(--grey-text-color);
   font-size: 21px;
-  line-height: 119%;
-  white-space: nowrap
+  line-height: 119%
 }
 .breadcrumbs__item {
   color: var(--grey-text-color);
   font-size: 21px;
-  line-height: 119%;
-  white-space: nowrap
+  line-height: 119%
 }
 .pagging {
   display: -ms-grid;
@@ -6716,11 +6732,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .main-catalog__grid {
     gap: 35px
   }
-  .main-catalog__cards {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2,1fr);
-    gap: 40px 30px
-  }
   .custom-bouquets__grid {
     gap: 40px 30px
   }
@@ -6765,6 +6776,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .search-result .main-catalog__cards {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3,1fr)
+  }
+  .main-catalog__cards {
+    gap: 40px 30px
   }
   .loyalty-program {
     display: -ms-grid;
@@ -7670,6 +7684,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-bottom: .9375rem
   }
   .main-catalog__cards {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2,1fr);
     gap: 30px 10px;
     margin: 0 -.625rem;
     margin-bottom: 2.5rem

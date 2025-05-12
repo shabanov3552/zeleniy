@@ -282,12 +282,12 @@
          }
       }
 
-      @media (max-width:bp.$xxl) {
-         grid-template-columns: repeat(2, 1fr);
+      @media (max-width:bp.$xl) {
          gap: 40px 30px;
       }
 
       @media (max-width:bp.$md) {
+         grid-template-columns: repeat(2, 1fr);
          gap: 30px 10px;
          // padding: func.rem(0) func.rem(0);
          margin: func.rem(0) func.rem(-10);
